@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单元素的预先载入</title>
+    <style>
+        .item {
+            width: 800px;
+            height: 100px;
+            border: 1px solid #2F4056;
+            margin: 30px auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--select 下拉列表的载入-->
+    <div class="item">
+        <h2>select下拉列表的载入</h2>
+        <form action="">
+            <label>科室:</label>
+            <div style="width: 140px!important;height: 38px;">
+                <select name="dept">
+                    <option value="">--请选择--</option>
+                    <!--<option value="0">男</option>-->
+                    <!--<option value="1">女</option>-->
+                    <!--<option value="2">保密</option>-->
+                </select>
+            </div>
+        </form>
+    </div>
+    <!--radio 单选按钮 的载入-->
+    <!--<div class="item">
+        <h2>radio 单选按钮 的载入</h2>
+        <form action="">
+            <label>班次:</label>
+            <div>
+                <input type="radio" name="banci" value="0" title="白班" checked>
+                <input type="radio" name="banci" value="1" title="夜班">
+            </div>
+        </form>
+    </div>-->
+
+<!--script引入-->
+    <script src="../../assets/libs/jquery/jquery-3.3.1.js"></script>
+    <script src="../../assets/pages/jquery/01preLoadFormElem.js"></script>
+</body>
+</html>

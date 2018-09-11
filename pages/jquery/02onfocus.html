@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery输入完成后自动跳到下一个输入框</title>
+    <style>
+        .input {
+            display:block;
+            width:40px;
+            height:35px;
+            float:left;
+            margin-left:10px;
+            text-align:center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="body">
+        <input type="text" maxlength="1" class="input">
+        <input type="text" maxlength="1" class="input">
+        <input type="text" maxlength="1" class="input">
+        <input type="text" maxlength="1" class="input">
+        <input type="text" maxlength="1" class="input">
+        <input type="text" maxlength="1" class="input">
+    </div>
+    <!--script引入-->
+    <script src="../../assets/libs/jquery/jquery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            var inputLength = $('input').length;
+            //$('input').keyup(function(){})
+            //使用jQuery事件代理的事件绑定方式，不需要对每个input进行事件绑定，有利于性能优化
+            $('#body').delegate('input', 'keyup', function() {
+                var _this = $(this),
+                    valLength = _this.val().length,
+                    index = _this.index();
+                if (valLength > 0) {
+                    if ((index + 1) > inputLength) return false; //输入完成时进行操作
+                    _this.attr('data-in', 'true').next().focus();
+                } else if (valLength == 0 && _this.attr('data-in') == 'true') {
+                    if (index == 0) return false; //删除所有时进行操作
+                    _this.attr('data-in', 'false').prev().focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

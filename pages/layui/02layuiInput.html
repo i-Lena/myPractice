@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02layui录入页面</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="stylesheet" href="../../assets/libs/layui/css/layui.css">
+    <style>
+        .layui-col-space30 {
+            padding: 0px 15px;
+        }
+        .mt10 {
+            margin-top: 10px;
+        }
+        .ml30 {
+            margin-left: 30px;
+        }
+        .w200 {
+            width: 200px;
+        }
+        .w25p {
+            width: 25%;
+        }
+        .inlineBlock {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .block {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<body style="height: 100%;">
+<!--框架-->
+<div class="layui-row" style="padding: 10px 20px 0px 20px;">
+    <div class="layui-col-md12">
+            <span class="layui-breadcrumb">
+              <a href="javascript:void(0);" >系统管理</a>
+              <a><cite>序列号管理</cite></a>
+            </span>
+    </div>
+</div>
+<div class="layui-row" style="padding: 0px 20px 0px 10px;">
+    <hr class="layui-bg-green">
+</div>
+<!-----主体----->
+<form class="layui-form" action="" name="baseInfoSubmit">
+    <!--基本登记信息-->
+    <div class="layui-form-item" style="padding: 0px 20px 0px 10px;">
+        <div class="layui-row">
+            <h3>基本登记信息</h3>
+            <hr class="layui-bg-green">
+        </div>
+        <div class="layui-row layui-container">
+            <div class="infoItem">
+                <label>姓名：</label>
+                <div class="mt10">
+                    <input type="text" class="layui-input" id="name" autofocus="autofocus" name="">
+                </div>
+            </div>
+            <div class="infoItem mt10">
+                <label>身份证号：</label>
+                <div class="mt10">
+                    <input type="text" class="layui-input auto-jump" auto-verify="identify" id="identify" name="">
+                </div>
+            </div>
+            <div class="infoItem mt10">
+                <label class="block">是否为辅助生殖：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input auto-jump" auto-verify="yesno" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+            </div>
+            <div class="infoItem mt10">
+                <label>预约机构：</label>
+                <div class="mt10">
+                    <input type="text" class="layui-input" name="">
+                </div>
+            </div>
+            <div class="infoItem mt10">
+                <label>预约时间：</label>
+                <div class="mt10">
+                    <input type="text" class="layui-input auto-jump" placeholder="格式：20180101" name="" auto-verify="preTime">
+                </div>
+            </div>
+            <div class="infoItem mt10">
+                <label class="block">是否做过孕前检查：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input auto-jump" auto-verify="yesno" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+            </div>
+            <div class="infoItem mt10">
+                <label>检查机构：</label>
+                <div class="mt10">
+                    <input type="text" class="layui-input" name="">
+                </div>
+            </div>
+            <div class="infoItem mt10">
+                <label class="block">检查结果：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input auto-jump" auto-verify="yesno" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 正常</div>
+                    <div class="inlineBlock ml30">1 异常</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--调查信息-->
+    <div class="layui-form-item" style="padding: 0px 20px 0px 10px;">
+        <div class="layui-row">
+            <h3>调查信息</h3>
+            <hr class="layui-bg-green">
+        </div>
+        <div class="layui-row layui-container">
+            <div class="infoItem mt10">
+                <label class="block">1.现住地：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input auto-jump" name="" auto-verify="currentPlace">
+                </div>
+                <div class="inlineBlock" id="curAdress">
+                    <div class="inlineBlock ml30">1 城镇</div>
+                    <div class="inlineBlock ml30">2 农村</div>
+                </div>
+            </div>
+            <div class="infoItem mt10" style="width: 40%;float: left; margin-bottom: 10px;">
+                <label class="block">2.身高（单位cm）：</label>
+                <div class="mt10">
+                    <input type="text" class="layui-input" name="">
+                </div>
+            </div>
+            <div class="infoItem mt10" style="width: 40%;float: right;">
+                <label class="block">3.孕前体重（单位KG）：</label>
+                <div class="mt10">
+                    <input type="text" class="layui-input" name="">
+                </div>
+            </div>
+            <div class="infoItem mt10" style="clear:both;">
+                <label class="block">4.孕妇文化程度：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input auto-jump" name="" auto-verify="edu">
+                </div>
+                <div class="inlineBlock" id="eduLevel">
+                    <div class="inlineBlock ml30">
+                        <span name="eduCode"></span>
+                        <span name="eduText"></span>
+                    </div>
+                    <div class="inlineBlock ml30">2 小学</div>
+                    <div class="inlineBlock ml30">3 初中（技校）</div>
+                    <div class="inlineBlock ml30">4 高中（中专）</div>
+                    <div class="inlineBlock ml30">5 大专及本科</div>
+                    <div class="inlineBlock ml30">6 研究生及以上</div>
+                </div>
+            </div>
+            <div class="infoItem mt10" style="clear:both;">
+                <label class="block">5.职业：</label>
+                <div class="mt10 w200">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="" id="occupation">
+                    <div class="inlineBlock">1 工人</div>
+                    <div class="inlineBlock ml30">2 农民</div>
+                    <div class="inlineBlock ml30">3 机关工作人员</div>
+                    <div class="inlineBlock ml30">4 服务员/售货员</div>
+                    <div class="inlineBlock ml30">5 专业技术人员</div>
+                    <div class="inlineBlock ml30">6 无业</div>
+                    <div class="inlineBlock ml30">7 其他</div>
+                    <div class="inlineBlock ml30">
+                        <input type="text" class="layui-input w100" name="">
+                    </div>
+                </div>
+            </div>
+            <!--6-->
+            <div class="infoItem mt">
+                <label class="block">6.曾经怀孕：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">1 无</div>
+                    <div class="inlineBlock ml30">2 有</div>
+                </div>
+                <div class="mt10">
+                    <div class="layui-row layui-col-space10" id="pregResult">
+                        <div class="layui-col-md4">
+                            <div class="inlineBlock w25p">怀孕</div>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" placeholder="单位/次" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">自然流产</label>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" placeholder="单位/次" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">人工流产</label>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" placeholder="单位/次" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">活产（足月活产）</label>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" placeholder="单位/次" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">早产（小于37周）</label>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" placeholder="单位/次" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">死胎死产</label>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" placeholder="单位/次" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--7-->
+            <div class="infoItem mt10">
+                <label class="block">7.是否孕育过出生缺陷儿（如先心病、并指/趾、多指/趾、唇腭裂、外耳畸形、唐氏综合征等）：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="mt10">
+                    <div class="layui-row layui-col-space10">
+                        <div class="layui-col-md4">
+                            <div class="inlineBlock w25p">病种1</div>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">病种2</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">病种3</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--8-->
+            <div class="infoItem mt10">
+                <label class="block">8.怀孕后头3个月是否患过以下疾病：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="layui-row layui-col-space10 mt10" id="pregDisease">
+                    <div class="layui-col-md4">
+                        <div class="inlineBlock w25p">高血压</div>
+                        <div class="inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                    </div>
+                    <div class="layui-col-md4">
+                        <label class="inlineBlock w25p">糖尿病</label>
+                        <div class="inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                    </div>
+                    <div class="layui-col-md4">
+                        <label class="inlineBlock w25p">冠心病</label>
+                        <div class="inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                    </div>
+                    <div class="layui-col-md4">
+                        <div class="inlineBlock w25p">贫血</div>
+                        <div class="inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                    </div>
+                    <div class="layui-col-md4">
+                        <label class="inlineBlock w25p">发烧（＞38℃）</label>
+                        <div class="inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                    </div>
+                    <div class="layui-col-md4">
+                        <label class="inlineBlock w25p">感冒</label>
+                        <div class="inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                    </div>
+                    <div class="layui-col-md4">
+                        <div class="inlineBlock w25p">甲状腺疾病</div>
+                        <div class="inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                    </div>
+                    <div class="layui-col-md4">
+                        <label class="inlineBlock w25p">泌尿生殖系统疾病</label>
+                        <div class="inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                    </div>
+                    <div class="layui-col-md4">
+                        <label class="inlineBlock w25p">其他</label>
+                        <div class="inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="">
+                    <div class="layui-row layui-col-space10">
+
+                    </div>
+                </div>
+                <div class="">
+                    <div class="layui-row layui-col-space10">
+
+                    </div>
+                </div>-->
+            </div>
+            <!--9-->
+            <div class="infoItem mt10">
+                <label class="block">9.怀孕后头3个月服药：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="mt10">
+                    <div class="layui-row layui-col-space10">
+                        <div class="layui-col-md4">
+                            <div class="inlineBlock w25p">药物名称1</div>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">服药孕周1</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">服药剂量1</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="layui-row layui-col-space10">
+                        <div class="layui-col-md4">
+                            <div class="inlineBlock w25p">药物名称2</div>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">服药孕周2</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">服药剂量2</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="layui-row layui-col-space10">
+                        <div class="layui-col-md4">
+                            <div class="inlineBlock w25p">药物名称3</div>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">服药孕周3</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">服药剂量3</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--10-->
+            <div class="infoItem mt10">
+                <label class="block">10.孕妇出生缺陷疾病史（如先心病、并指/趾、多指/趾、唇腭裂、外耳畸形、唐氏综合征等）：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="mt10">
+                    <div class="layui-row layui-col-space10">
+                        <div class="layui-col-md4">
+                            <div class="inlineBlock w25p">疾病名称1</div>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">疾病名称2</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">疾病名称3</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--11-->
+            <div class="infoItem mt10">
+                <label class="block">11.丈夫出生缺陷疾病史：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="mt10">
+                    <div class="layui-row layui-col-space10">
+                        <div class="layui-col-md4">
+                            <div class="inlineBlock w25p">疾病名称1</div>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">疾病名称2</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">疾病名称3</label>
+                            <div class="inlineBlock" style="width: 73.5%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--12-->
+            <div class="infoItem mt10">
+                <label class="block">12.双方亲属出生缺陷疾病史：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="mt10">
+                    <div class="layui-row layui-col-space10">
+                        <div class="layui-col-md6">
+                            <div class="inlineBlock w25p">亲属关系1</div>
+                            <div class="inlineBlock" style="width: 74%">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <label class="inlineBlock w25p">疾病名称1</label>
+                            <div class="inlineBlock" style="width: 74%">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="layui-row layui-col-space10">
+                        <div class="layui-col-md6">
+                            <label class="inlineBlock w25p">亲属关系2</label>
+                            <div class="inlineBlock" style="width: 74%">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div class="inlineBlock w25p">疾病名称2</div>
+                            <div class="inlineBlock" style="width: 74%">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="layui-row layui-col-space10">
+                        <div class="layui-col-md6">
+                            <label class="inlineBlock w25p">亲属关系3</label>
+                            <div class="inlineBlock" style="width: 74%">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <label class="inlineBlock w25p">疾病名称3</label>
+                            <div class="inlineBlock" style="width: 74%">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--13-->
+            <div class="infoItem mt10">
+                <label class="block">13.口服叶酸：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="mt10">
+                    <div class="layui-row layui-col-space10" id="folate">
+                        <div class="layui-col-md6">
+                            <div class="inlineBlock w25p">孕前3个月口服</div>
+                            <div class="inlineBlock" style="width: 74%">
+                                <input type="text" class="layui-input" name="" flag="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <label class="inlineBlock w25p">孕后头3个月口服</label>
+                            <div class="inlineBlock" style="width: 74%">
+                                <input type="text" class="layui-input" name="" flag="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--14-->
+            <div class="infoItem mt10">
+                <label class="block">14.孕前是否偏食：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 少食蔬菜</div>
+                    <div class="inlineBlock ml30">2 少食肉类</div>
+                </div>
+            </div>
+            <!--15-->
+            <div class="infoItem mt10">
+                <label class="block">15.怀孕前半年至怀孕后头3个月，生活或工作环境中是否接触以下因素（可多选）：</label>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="mt10">
+                    <div class="layui-row layui-col-space10" id="factors">
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock" style="width: 30%">有机溶剂（如新装修、油漆）</label>
+                            <div class="inlineBlock" style="width: 68%;">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock" style="width: 30%">放射线</label>
+                            <div class="inlineBlock" style="width: 68%">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock" style="width: 30%">高温</label>
+                            <div class="inlineBlock" style="width: 68%">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">密切接触猫狗等家畜、宠物</label>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">噪音</label>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">震动</label>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">重金属（铅、汞等）</label>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">农药</label>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <label class="inlineBlock w25p">其他</label>
+                            <div class="inlineBlock">
+                                <input type="text" class="layui-input" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--16-->
+            <div class="infoItem mt10">
+                <label>16.丈夫出生日期：</label>
+                <div class="mt10">
+                    <input type="text" class="layui-input" name="">
+                </div>
+            </div>
+            <!--17-->
+            <div class="infoItem mt10">
+                <label class="block">17.个人吸烟情况：</label>
+                <div class="inlineBlock">
+                    怀孕时前三个月<!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+                </div>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="inlineBlock ml30" style="width: 60%;">
+                    <input type="text" class="layui-input" placeholder="每天输入量（单位支）" name="">
+                </div>
+                <br>
+                <div class="inlineBlock">
+                    怀孕后头三个月
+                </div>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="inlineBlock ml30" style="width: 60%;">
+                    <input type="text" class="layui-input" placeholder="每天输入量（单位支）" name="">
+                </div>
+            </div>
+            <!--18-->
+            <div class="infoItem mt10">
+                <label class="block">18.丈夫吸烟情况：</label>
+                <div class="inlineBlock">
+                    怀孕时前三个月<!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+                </div>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="inlineBlock ml30" style="width: 60%;">
+                    <input type="text" class="layui-input" placeholder="每天输入量（单位支）" name="">
+                </div>
+                <br>
+                <div class="inlineBlock">
+                    怀孕后头三个月
+                </div>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="inlineBlock ml30" style="width: 60%;">
+                    <input type="text" class="layui-input" placeholder="每天输入量（单位支）" name="">
+                </div>
+            </div>
+            <!--19-->
+            <div class="infoItem mt10">
+                <label class="block">19.您身边/同一房间/工作环境有人吸烟：</label>
+                <div class="inlineBlock">
+                    怀孕时前三个月<!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+                </div>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="inlineBlock ml30" style="width: 60%;">
+                    <input type="text" class="layui-input" placeholder="每天接触时间（单位分钟）" name="">
+                </div>
+                <br>
+                <div class="inlineBlock">
+                    怀孕后头三个月
+                </div>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="inlineBlock ml30" style="width: 60%;">
+                    <input type="text" class="layui-input" placeholder="每天接触时间（单位分钟）" name="">
+                </div>
+            </div>
+            <!--20-->
+            <div class="infoItem mt10">
+                <label class="block">20.本人饮酒情况：</label>
+                <div class="inlineBlock">
+                    怀孕时前三个月<!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+                </div>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="layui-row" id="femaleBeforeDrink">
+                    <div class="">
+                        <div class="inlineBlock" style="width: 8.5%">
+                            红酒
+                        </div>
+                        <div class="mt10 w200 inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                        <div class="inlineBlock">
+                            <div class="inlineBlock ml30">0 否</div>
+                            <div class="inlineBlock ml30">1 是</div>
+                        </div>
+                        <div class="inlineBlock ml30" style="width: 60%;">
+                            <input type="text" class="layui-input" placeholder="每天饮酒量（单位ML）" name="">
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="inlineBlock" style="width: 8.5%">
+                            白酒
+                        </div>
+                        <div class="mt10 w200 inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                        <div class="inlineBlock">
+                            <div class="inlineBlock ml30">0 否</div>
+                            <div class="inlineBlock ml30">1 是</div>
+                        </div>
+                        <div class="inlineBlock ml30" style="width: 60%;">
+                            <input type="text" class="layui-input" placeholder="每天饮酒量（单位ML）" name="">
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="inlineBlock" style="width: 8.5%">
+                            啤酒
+                        </div>
+                        <div class="mt10 w200 inlineBlock">
+                            <input type="text" class="layui-input" name="">
+                        </div>
+                        <div class="inlineBlock">
+                            <div class="inlineBlock ml30">0 否</div>
+                            <div class="inlineBlock ml30">1 是</div>
+                        </div>
+                        <div class="inlineBlock ml30" style="width: 60%;">
+                            <input type="text" class="layui-input" placeholder="每天饮酒量（单位ML）" name="">
+                        </div>
+                    </div>
+                </div>
+                <div class="inlineBlock">
+                    怀孕后头三个月
+                </div>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="layui-row" id="femaleAfterDrink">
+
+                </div>
+            </div>
+            <!--21-->
+            <div class="infoItem mt10">
+                <label class="block">21.丈夫饮酒情况：</label>
+                <div class="inlineBlock">
+                    怀孕时前三个月<!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+                </div>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="layui-row" id="maleBeforeDrink">
+
+                </div>
+                <div class="inlineBlock">
+                    怀孕后头三个月
+                </div>
+                <div class="mt10 w200 inlineBlock">
+                    <input type="text" class="layui-input" name="">
+                </div>
+                <div class="inlineBlock">
+                    <div class="inlineBlock ml30">0 否</div>
+                    <div class="inlineBlock ml30">1 是</div>
+                </div>
+                <div class="layui-row" id="maleAfterDrink">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--调查人信息-->
+    <div class="layui-form-item" style="padding: 0px 20px 0px 10px;">
+        <div class="layui-row">
+            <h3>调查人信息</h3>
+            <hr class="layui-bg-green">
+        </div>
+        <div class="layui-row layui-container">
+            <div class="infoItem mt10">
+                <label>调查人员：</label>
+                <div class="mt10">
+                    <input type="text" class="layui-input" name="">
+                </div>
+            </div>
+            <div class="infoItem mt10">
+                <label>录入人员：</label>
+                <div class="mt10">
+                    <input type="text" class="layui-input" name="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--清屏与保存按钮-->
+    <div class="layui-form-item mt10" style="padding: 0px 20px 0px 10px; text-align: right;">
+        <div class="layui-row layui-container">
+            <button type="reset" class="layui-btn layui-btn-primary">清屏</button>
+            <button class="layui-btn" type="button" lay-filter="save">保存</button>
+        </div>
+    </div>
+</form>
+<!--============================动态加载clone==========================================-->
+<!--1.现居地-->
+<div class="inlineBlock" id="curAdressClone" style="display: none;">
+    <div class="inlineBlock ml30">
+        <span class="curAdressCode">1</span>
+        <span class="curAdressText">1</span>
+    </div>
+</div>
+<!--4. 文化程度-->
+<div class="inlineBlock" id="eduClone" style="display: none">
+    <div class="inlineBlock ml30">
+        <span class="eduCode">1</span>
+        <span class="eduText">内容</span>
+    </div>
+</div>
+<!--5. 职业-->
+<div class="inlineBlock" id="occClone" style="display: none">
+    <div class="inlineBlock ml30">
+        <span class="occCode">1</span>
+        <span class="occText">内容</span>
+    </div>
+</div>
+<!--6. 曾经怀孕-->
+<div class="layui-row layui-col-space10" id="pregClone" style="display: none">
+    <div class="layui-col-md4">
+        <div>
+            <label class="inlineBlock w25p">怀孕</label>
+            <div class="inlineBlock" style="width: 73.5%;">
+                <input type="text" class="layui-input" placeholder="单位/次" name="" flag="">
+            </div>
+        </div>
+    </div>
+</div>
+<!--7.是否孕育过出生缺陷儿-->
+<!--8.怀孕后头3个月是否患过以下疾病-->
+<div class="layui-row layui-col-space10 mt10" id="pregDisClone" style="display: none;">
+    <div class="layui-col-md4">
+        <div>
+            <label class="inlineBlock w25p pregDisText">高血压</label>
+            <div class="inlineBlock" style="width: 73.5%;">
+                <input type="text" class="layui-input" name="" flag="">
+            </div>
+        </div>
+    </div>
+</div>
+<!--9.怀孕后头3个月服药-->
+
+<!--10.孕妇出生缺陷疾病史（如先心病、并指/趾、多指/趾、唇腭裂、外耳畸形、唐氏综合征等）-->
+<!--11.丈夫出生缺陷疾病史-->
+<!--12.双方亲属出生缺陷疾病史-->
+<!--13.口服叶酸-->
+<div class="layui-row layui-col-space10" id="folateClone" style="display: none;">
+    <div class="layui-col-md6">
+        <label class="inlineBlock w25p folateText">孕前3个月口服</label>
+        <div class="inlineBlock" style="width: 74%">
+            <input type="text" class="layui-input" name="" flag="">
+        </div>
+    </div>
+</div>
+<!--14.孕前是否偏食-->
+<!--15.怀孕前半年至怀孕后头3个月，生活或工作环境中是否接触以下因素（可多选）-->
+<div class="layui-row layui-col-space10" id="factorsClone" style="display: none;">
+    <div class="layui-col-md4">
+        <label class="inlineBlock" style="width: 30%">有机溶剂（如新装修、油漆）</label>
+        <div class="inlineBlock" style="width: 68%;">
+            <input type="text" class="layui-input" name="" flag="">
+        </div>
+    </div>
+</div>
+<!--20-21-->
+<div class="layui-row" id="drinkTypeClone" style="display: none;">
+    <div class="femaleBeforeDrink">
+        <label class="inlineBlock" style="width: 8.5%">
+            红酒
+        </label>
+        <div class="mt10 w200 inlineBlock">
+            <input type="text" class="layui-input" name="" flag="">
+        </div>
+        <div class="inlineBlock">
+            <div class="inlineBlock ml30">0 否</div>
+            <div class="inlineBlock ml30">1 是</div>
+        </div>
+        <div class="inlineBlock ml30" style="width: 60%;">
+            <input type="text" class="layui-input" placeholder="每天饮酒量（单位ML）" name="" flag="">
+        </div>
+    </div>
+    <div class="femaleAfterDrink">
+        <label class="inlineBlock" style="width: 8.5%">
+            红酒
+        </label>
+        <div class="mt10 w200 inlineBlock">
+            <input type="text" class="layui-input" name="" flag="">
+        </div>
+        <div class="inlineBlock">
+            <div class="inlineBlock ml30">0 否</div>
+            <div class="inlineBlock ml30">1 是</div>
+        </div>
+        <div class="inlineBlock ml30" style="width: 60%;">
+            <input type="text" class="layui-input" placeholder="每天饮酒量（单位ML）" name="" flag="">
+        </div>
+    </div>
+    <div class="maleBeforeDrink">
+        <label class="inlineBlock" style="width: 8.5%">
+            红酒
+        </label>
+        <div class="mt10 w200 inlineBlock">
+            <input type="text" class="layui-input" name="" flag="">
+        </div>
+        <div class="inlineBlock">
+            <div class="inlineBlock ml30">0 否</div>
+            <div class="inlineBlock ml30">1 是</div>
+        </div>
+        <div class="inlineBlock ml30" style="width: 60%;">
+            <input type="text" class="layui-input" placeholder="每天饮酒量（单位ML）" name="" flag="">
+        </div>
+    </div>
+    <div class="maleAfterDrink">
+        <label class="inlineBlock" style="width: 8.5%">
+            红酒
+        </label>
+        <div class="mt10 w200 inlineBlock">
+            <input type="text" class="layui-input" name="" flag="">
+        </div>
+        <div class="inlineBlock">
+            <div class="inlineBlock ml30">0 否</div>
+            <div class="inlineBlock ml30">1 是</div>
+        </div>
+        <div class="inlineBlock ml30" style="width: 60%;">
+            <input type="text" class="layui-input" placeholder="每天饮酒量（单位ML）" name="" flag="">
+        </div>
+    </div>
+</div>
+
+<script src="../../assets/libs/jquery/jquery-3.3.1.min.js"></script>
+<script src="../../assets/libs/layui/layui.all.js" type="text/javascript"></script>
+<script src="" type="text/javascript"></script>
+
+<script src="../../assets/pages/prescreen/infoMng/addBaseInfo.js" type="text/javascript"></script>
+</body>
+</body>
+</html>

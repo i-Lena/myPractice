@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5分钟上手ECharts</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 600px;height:400px;"></div>
+
+
+<!--引入echarts.js-->
+<script src="../../../assets/libs/echarts/echarts.js"></script>
+<!--此页面js-->
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myEChart = echarts.init(document.getElementById("main"));
+    // 指定图表的配置项和数据
+    var option = {
+        //title 标题组件，包含主标题和副标题
+        title: {
+            id: 'cid',  //组件id。默认不指定。指定则可用于在option或者API中引用组件。
+            show: true,  //是否显示标题，默认为true
+            text:'ECharts入门实例',  //主标题文本
+            link: "www.baidu.com",  //主标题文本超链接  为该目录下的相对路径
+            target: 'blank',  //指定窗口打开主标题超链接  可选：（1）self:当前窗口打开（2）blank:新窗口打开
+            textStyle: {
+                color: '#f00',  //主标题文字的颜色
+                fontStyle: 'normal',  //主标题文字字体的风格  可选：（1）‘normal’ (2)'italic'  (3)'oblique'
+                fontWeight: 'bolder',  //主标题文字字体的粗细  可选：'normal' , 'bold','bolder','lighter',100|200|300|400...
+                fontFamily: 'serif',  //主标题文字的字体系列
+                fontSize: 18,  //主标题文字的字体大小
+                align: 'right', //文字水平对齐方式
+            }
+        },
+        //tooltip 提示框组件。
+        tooltip: {},
+        //legend 图例组件
+        legend: {
+            data: [{
+                name: '销量',
+                icon: 'rect',  //前十中设置图形为矩形
+                textStyle: {
+                    color: 'red'
+                }
+            }]
+        },
+        xAxis: {
+            data: ['衬衫','羊毛衫','雪纺衫','裤子','高跟鞋','袜子'],
+        },
+        yAxis: {
+
+        },
+        series: [{
+            name: '销量',
+            type: 'bar',
+            data: [5,20,36,10,10,20],
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myEChart.setOption(option);
+</script>
+</body>
+</html>

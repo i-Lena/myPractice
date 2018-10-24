@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>柱状图示例</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+
+    </style>
+</head>
+<body>
+<!--存放DOM的盒子-->
+    <div id="main" style="width: 800px;height: 500px; background-color: #ccc;margin: 0 auto;"></div>
+</body>
+<!--引入ECharts.js-->
+<script src="../../../assets/libs/echarts/echarts.js"></script>
+<!--本页面js-->
+<script>
+    var myChart = echarts.init(document.getElementById("main"));
+    var option = {
+        title: [{  //标题
+            text: '柱状图',  //主标题文本
+            left: 'center',
+            top: 'top',
+//            subtext: '副标题',   //副标题文本
+            link: '/www.baidu.com',  //主标题文本超链接
+            target: 'blank',  //新窗口打开  self 当前窗口打开
+            textStyle: {
+                color: 'blue',
+            },
+            subtextStyle:{},
+            padding: [5,10,5,10],  //标题内边距
+            itemGap: 10,  //主副标题间距  默认10
+        }],
+        legend: {
+            //图例组件，控制系列显示与否
+            data: [
+                {
+                    name: 'test1', //图例项名称
+                    icon: 'circle',  //标记类型  circle rect roundRect triangle diamond pin arrow
+                    textStyle: {   //图例项文本样式
+                        color: 'red',
+                        align: 'center'
+                    }
+                },{
+                    name: 'test2',
+                    icon: 'triangle',
+                    textStyle: {
+                        color: 'blue'
+                    }
+                }
+            ]
+        },
+        grid: {  //直角坐标系内绘制网格
+
+        },
+        xAxis: {  //x坐标轴
+            type: 'category', //坐标轴类型  category 类目轴  value竖直轴  time时间轴  log对数轴
+            name: 'X轴名称',
+            nameLocation: 'end',  //坐标轴名称显示名称
+//            min: 0,  //坐标轴刻度最小值
+//            max: 1000,  //坐标轴刻度最大值
+            data: ['一','二','三','四','五','六','七'],
+        },
+        yAxis: {  //y坐标轴
+            type: 'value',
+            name: 'Y轴名称',
+            nameLocation: 'end',
+            data: ['50','130','20','100','170','130','140'],
+        },
+        dataZoom:{
+            //区域缩放
+        },
+        visualMap: {
+            //视觉映射组件
+        },
+        tooltip: {
+            //提示框组件
+        },
+        axisPointer: {
+            //坐标指示器
+        },
+        toolbox: {
+            //工具栏
+            feature:{
+               //各个工具配置项
+               saveAsImage: {  //保存为图片
+//                    type: png,   //保存格式，默认为png
+//                   name: 'test', //保存的文件名称
+               },
+                restore: {  //配置项还原
+
+                },
+                dataView: {
+                    //数据视图工具
+                },
+                dataZoom: {
+                    //区域缩放 只支持直角坐标系的缩放
+                },
+                magicType: {
+                    //动态类型切换
+                    type: ['more','bar','stack','tiled']
+                },
+                brush: {
+                    //选框组件的控制按钮
+                }
+            }
+        },
+        brush: {
+            //区域选择工具
+        },
+        series: [
+            {
+                type: 'bar', //柱状图
+                name: 'test1',
+                itemStyle: {
+                    normal: {
+                        color: '#ddd'
+                    }
+                },
+                data: [11,42,25,35,44,16,5],
+            },
+            {
+                type: 'bar',  //柱状图
+                name: 'test2',
+                itemStyle: {
+                    normal: {
+                        color: '#ccc'
+                    }
+                },
+                data: [11,52,15,25,34,16,5]
+            }
+        ],
+    };
+    myChart.setOption(option);
+</script>
+</html>

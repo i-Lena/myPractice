@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05layui-tab选项卡</title>
+    <link rel="stylesheet" href="../../assets/libs/layui/css/layui.css">
+    <style>
+        section {
+            width: 90%;
+            margin: 10px auto;
+            background-color: #eeeeee;
+        }
+        section h2 {
+            padding: 10px;
+        }
+        .sectionDiv {
+            background-color: #fff;
+            border: 1px solid #eeeeee;
+            padding: 20px;
+        }
+        .remark {
+            line-height: 2em;
+        }
+        .remark ul li{
+            list-style: decimal;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Tab选项卡-页面元素</h1>
+    <section>
+        <h2>默认选项卡</h2>
+        <div class="sectionDiv">
+            <div class="layui-tab">
+                <ul class="layui-tab-title">
+                    <li class="layui-this">网站设置</li>
+                    <li>用户管理</li>
+                    <li>权限分配</li>
+                    <li>商品管理</li>
+                    <li>订单管理</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">内容1</div>
+                    <div class="layui-tab-item">内容2</div>
+                    <div class="layui-tab-item">内容3</div>
+                    <div class="layui-tab-item">内容4</div>
+                    <div class="layui-tab-item">内容5</div>
+                </div>
+            </div>
+            <hr class="layui-bg-green">
+            <div class="remark">
+                导航菜单可应用于头部和侧边，tab选项卡提供多套风格，支持响应式，支持删除选项卡等功能。面包屑结构简单，支持自定义分隔符。
+                <p>依赖加载组件：element(请注意：必须加载element模块，相关功能才能正常使用，详见：内置组件-常用元素操作-基础方法)</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Tab简洁风格</h2>
+        <div class="sectionDiv">
+            <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                <ul class="layui-tab-title">
+                    <li>网站设置</li>
+                    <li>用户管理</li>
+                    <li>权限分配</li>
+                    <li>商品管理</li>
+                    <li>订单管理</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">内容1</div>
+                    <div class="layui-tab-item">内容2</div>
+                    <div class="layui-tab-item">内容3</div>
+                    <div class="layui-tab-item">内容4</div>
+                    <div class="layui-tab-item">内容5</div>
+                </div>
+            </div>
+            <hr class="layui-bg-green">
+            <div class="remark">
+                <p>通过追加class="layui-tab-brief"来设定简洁风格。</p>
+                <p>如果存在layui-tab-item的内容区域，在切换时，自动定位到对应内容。
+                    如果不存在内容区域，则不会定位到对应内容。通常需要设置过滤器，通过element模块的
+                    监听tab事件来进行切换操作。
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Tab卡片风格</h2>
+        <div class="sectionDiv">
+            <div class="layui-tab layui-tab-card">
+                <ul class="layui-tab-title">
+                    <li class="layui-this">网站设置</li>
+                    <li>用户管理</li>
+                    <li>权限分配</li>
+                    <li>商品管理</li>
+                    <li>订单管理</li>
+                </ul>
+                <div class="layui-tab-content" style="height: 100px;">
+                    <div class="layui-tab-item layui-show">内容111</div>
+                    <div class="layui-tab-item">内容222</div>
+                    <div class="layui-tab-item">内容333</div>
+                    <div class="layui-tab-item">内容444</div>
+                    <div class="layui-tab-item">内容555</div>
+                </div>
+            </div>
+            <div class="remark">
+                <p>通过追加class="layui-tab-card"来设定卡片风格</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Tab响应式</h2>
+        <div class="sectionDiv">
+            <div class="remark">
+                <p>当容器的宽度不足以显示全部的选项时，即会自动出现展开图标。</p>
+                <p>所有的Tab风格都支持响应式。</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>带删除的Tab</h2>
+        <div class="sectionDiv">
+            <div class="layui-tab" lay-allowClose="true">
+                <ul class="layui-tab-title">
+                    <li class="layui-this">网站设置</li>
+                    <li>用户基本管理</li>
+                    <li>权限分配</li>
+                    <li>全部历史商品管理文字长一些测试</li>
+                    <li>订单管理</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">内容1</div>
+                    <div class="layui-tab-item">内容2</div>
+                    <div class="layui-tab-item">内容3</div>
+                    <div class="layui-tab-item">内容4</div>
+                    <div class="layui-tab-item">内容5</div>
+                </div>
+            </div>
+            <hr class="layui-bg-green">
+            <div class="remark">
+                <p>通过对父层容器设置属性lay-allowClose="true"来允许Tab选项卡被删除</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>ID焦点定位</h2>
+        <div class="sectionDiv">
+            <div class="layui-tab" lay-filter="test1">
+                <ul class="layui-tab-title">
+                    <li class="layui-this" lay-id="test111">文章列表</li>
+                    <li lay-id="id222">发送消息</li>
+                    <li lay-id="id333">权限分配</li>
+                    <li lay-id="id444">审核</li>
+                    <li lay-id="id555">订单管理</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">内容1</div>
+                    <div class="layui-tab-item">内容2</div>
+                    <div class="layui-tab-item">内容3</div>
+                    <div class="layui-tab-item">内容4</div>
+                    <div class="layui-tab-item">内容5</div>
+                </div>
+            </div>
+            <div class="remark">
+                <p>通过对选项卡设置属性lay-id="XXX"来作为唯一的匹配索引，以用于外部的定位切换，如后台的左侧导航以及页面地址的hash的匹配。</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/libs/layui/layui.js"></script>
+    <script>
+        layui.use("element",function () {
+            var element = layui.element;
+
+            //获取hash来切换选项卡，假设当前地址的hash为lay-id对应的值
+            var layid = location.hash.replace(/^#test1=/,'');
+            element.tabChange("test1",layid);  //假设当前地址为http://a.com#test1=id222,那么选项卡会自动切换到“发送消息”这一项
+
+            //监听tab切换，以改变地址hash值
+            element.on('tab(test1)',function () {
+                location.hash = 'test1' + this.getAttribute("lay-id");
+            });
+        });
+    </script>
+</body>
+</html>

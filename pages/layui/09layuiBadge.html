@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09layui页面元素-徽章</title>
+    <link rel="stylesheet" href="../../assets/libs/layui/css/layui.css">
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        section {
+            width: 90%;
+            margin: 10px auto;
+            background-color: #eeeeee;
+        }
+        section h2 {
+            padding: 10px;
+        }
+        .sectionDiv {
+            background-color: #fff;
+            border: 1px solid #eeeeee;
+            padding: 20px;
+        }
+        .remark {
+            line-height: 2em;
+            margin-top: 30px;
+        }
+        .remark ul li{
+            list-style: decimal;
+        }
+    </style>
+</head>
+<body>
+    <h1>layui页面元素-徽章</h1>
+    <section>
+        <h2>快速使用</h2>
+        <div class="sectionDiv">
+            <div>
+                <p style="line-height: 2em;">（1）小圆点,通过class="layui-badge-dot"来定义,里面不能加文字</p>
+                <p style="line-height: 2em; text-indent: 2.5em;">默认为红色</p>
+                <p style="text-indent: 2.5em;">
+                    <span class="layui-badge-dot"></span>
+                    <span class="layui-badge-dot layui-bg-orange"></span>
+                    <span class="layui-badge-dot layui-bg-cyan"></span>
+                    <span class="layui-badge-dot layui-bg-blue"></span>
+                    <span class="layui-badge-dot layui-bg-green"></span>
+                    <span class="layui-badge-dot layui-bg-black"></span>
+                    <span class="layui-badge-dot layui-bg-gray"></span>
+                </p>
+            </div>
+            <div>
+                <p style="line-height: 2em;">（2）椭圆体,通过class="layui-badge"来定义,这是主要的使用方式。</p>
+                <p style="margin-left: 2.5em;">
+                    <span class="layui-badge">6</span>
+                    <span class="layui-badge">996</span>
+                    <span class="layui-badge">6124435</span>
+                    <span class="layui-badge layui-bg-orange">橙</span>
+                    <span class="layui-badge layui-bg-cyan">青</span>
+                    <span class="layui-badge layui-bg-blue">蓝</span>
+                    <span class="layui-badge layui-bg-green">绿</span>
+                    <span class="layui-badge layui-bg-black">黑</span>
+                    <span class="layui-badge layui-bg-gray">灰</span>
+                </p>
+            </div>
+            <div>
+                <p style="line-height: 2em;">（3）边框体,通过class="layui-badge-rim"来定义。</p>
+                <p style="margin-left: 2.5em;">
+                    <span class="layui-badge-rim">6</span>
+                    <span class="layui-badge-rim">Hot</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>与其他元素的搭配</h2>
+        <div class="sectionDiv">
+            <p>徽章主要是修饰作用，因此必不可少要与几乎所有的元素搭配。我们目前对以下元素内置了徽章的排版支持。</p>
+            <div>
+                <h2>（1）按钮</h2>
+                <div style="margin-left: 5em;">
+                    <button class="layui-btn">查看消息 <span class="layui-badge layui-bg-gray">5</span></button>
+                    <button class="layui-btn">动态 <span class="layui-badge-dot layui-bg-orange"></span></button>
+                </div>
+            </div>
+            <div>
+                <h2>（2）导航</h2>
+                <div>
+                    <!--tips设置导航右对齐-->
+                    <ul class="layui-nav" style="text-align: right;">
+                        <li class="layui-nav-item"><a href="">控制台 <span class="layui-badge">9</span></a></li>
+                        <li class="layui-nav-item"><a href="">个人中心 <span class="layui-badge-dot"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h2>（3）选项卡（所有风格都支持，这里以简约风格为例）</h2>
+                <div>
+                    <div class="layui-tab layui-tab-brief">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">网站设置</li>
+                            <li>用户管理 <span class="layui-badge-dot"></span></li>
+                            <li>最新邮件 <span class="layui-badge">99+</span></li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">内容1</div>
+                            <div class="layui-tab-item">内容2</div>
+                            <div class="layui-tab-item">内容3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="../../assets/libs/layui/layui.js"></script>
+    <script>
+        layui.use("element",function () {
+           var element = layui.element;
+        });
+    </script>
+</body>
+</html>

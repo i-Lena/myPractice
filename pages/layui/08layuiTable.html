@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08layui页面元素-静态table</title>
+    <link rel="stylesheet" href="../../assets/libs/layui/css/layui.css">
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        section {
+            width: 90%;
+            margin: 10px auto;
+            background-color: #eeeeee;
+        }
+        section h2 {
+            padding: 10px;
+        }
+        .sectionDiv {
+            background-color: #fff;
+            border: 1px solid #eeeeee;
+            padding: 20px;
+        }
+        .remark {
+            line-height: 2em;
+            margin-top: 30px;
+        }
+        .remark ul li{
+            list-style: decimal;
+        }
+    </style>
+</head>
+<body>
+    <h1>layui页面元素-静态table</h1>
+    <section>
+        <h2>常规用法</h2>
+        <div class="sectionDiv">
+            <div>
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>昵称</th>
+                            <th>加入时间</th>
+                            <th>签名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>闲心</td>
+                            <td>2016-11-12</td>
+                            <td>人生就是一场修行</td>
+                        </tr>
+                        <tr>
+                            <td>文静</td>
+                            <td>2017-09-12</td>
+                            <td>于千万人中遇见</td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="remark">
+                <p>本部分介绍表格的HTML使用，通过内置的自定义属性对其进行风格的多样化设定。</p>
+                <p>注意：这仅仅局限于呈现基础表格，如果需要的是数据表格，需要阅读table模块。</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>基础属性</h2>
+        <div class="sectionDiv">
+            <div>
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>属性名</th>
+                        <th>属性值</th>
+                        <th>备注</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>lay-even</td>
+                        <td>无</td>
+                        <td>用于开启隔行背景，可与其他属性一起使用</td>
+                    </tr>
+                    <tr>
+                        <td>lay-skin="属性值"</td>
+                        <td>
+                            <p>line（行边框风格）</p>
+                            <p>row（列边框风格）</p>
+                            <p>nob（无边框风格）</p>
+                        </td>
+                        <td>若使用默认风格不设置该属性即可</td>
+                    </tr>
+                    <tr>
+                        <td>lay-size="属性值"</td>
+                        <td>
+                            <p>sm（小尺寸）</p>
+                            <p>lg（大尺寸）</p>
+                        </td>
+                        <td>若只用默认尺寸不设置该属性即可</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="remark">
+                <p>将所需要的基础属性写在table标签上即可，如（一个带隔行背景，且行边框风格的大尺寸表格）</p>
+                <p>table lay-even lay-skin="line" lay-size="lg"</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>表格其他风格</h2>
+        <div class="sectionDiv">
+            <p>(1)行边框 lay-skin="line" </p>
+            <table class="layui-table" lay-skin="line">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>昵称</th>
+                    <th>加入时间</th>
+                    <th>签名</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>闲心</td>
+                    <td>2016-11-12</td>
+                    <td>人生就是一场修行</td>
+                </tr>
+                <tr>
+                    <td>文静</td>
+                    <td>2017-09-12</td>
+                    <td>于千万人中遇见</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>(2)列边框 lay-skin="row"</p>
+            <table class="layui-table" lay-skin="row">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>昵称</th>
+                    <th>加入时间</th>
+                    <th>签名</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>闲心</td>
+                    <td>2016-11-12</td>
+                    <td>人生就是一场修行</td>
+                </tr>
+                <tr>
+                    <td>文静</td>
+                    <td>2017-09-12</td>
+                    <td>于千万人中遇见</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>(3)无边框 lay-skin="nob"</p>
+            <table class="layui-table" lay-skin="nob">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>昵称</th>
+                    <th>加入时间</th>
+                    <th>签名</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>闲心</td>
+                    <td>2016-11-12</td>
+                    <td>人生就是一场修行</td>
+                </tr>
+                <tr>
+                    <td>文静</td>
+                    <td>2017-09-12</td>
+                    <td>于千万人中遇见</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section>
+        <h2>表格其他尺寸</h2>
+        <div class="sectionDiv">
+            <p>(1)小尺寸 lay-size="sm" </p>
+            <table class="layui-table" lay-size="sm">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>昵称</th>
+                    <th>加入时间</th>
+                    <th>签名</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>闲心</td>
+                    <td>2016-11-12</td>
+                    <td>人生就是一场修行</td>
+                </tr>
+                <tr>
+                    <td>文静</td>
+                    <td>2017-09-12</td>
+                    <td>于千万人中遇见</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>(2)大尺寸 lay-size="lg"</p>
+            <table class="layui-table" lay-size="lg">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>昵称</th>
+                    <th>加入时间</th>
+                    <th>签名</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>闲心</td>
+                    <td>2016-11-12</td>
+                    <td>人生就是一场修行</td>
+                </tr>
+                <tr>
+                    <td>文静</td>
+                    <td>2017-09-12</td>
+                    <td>于千万人中遇见</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

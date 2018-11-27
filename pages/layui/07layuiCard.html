@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07layui页面元素-面板</title>
+    <link rel="stylesheet" href="../../assets/libs/layui/css/layui.css">
+    <style>
+        section {
+            width: 90%;
+            margin: 10px auto;
+            background-color: green;
+        }
+        section h2 {
+            padding: 10px;
+        }
+        .sectionDiv {
+            background-color: #fff;
+            border: 1px solid green;
+            padding: 20px;
+        }
+        .remark {
+            line-height: 2em;
+            margin-top: 30px;
+        }
+        .remark ul li{
+            list-style: decimal;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="margin-top: 20px; text-align: center;">layui页面元素-面板</h1>
+    <section>
+        <h2>卡片面板</h2>
+        <div class="sectionDiv" style="background-color: #eeeeee">
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md6">
+                    <div class="layui-card">
+                        <div class="layui-card-header">卡片面板</div>
+                        <div class="layui-card-body">
+                            卡片式面板面板通常用于非白色背景色的主体内<br>
+                            从而映衬出边框投影
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <div class="layui-card">
+                        <div class="layui-card-header">卡片面板</div>
+                        <div class="layui-card-body">
+                            卡片式面板面板通常用于非白色背景色的主体内<br>
+                            从而映衬出边框投影
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="remark">
+                <p>一般的面板通常是指一个独立的容器，而折叠面板则能有效地节省页面的可视面积，非常适合应用于：QA说明，帮助文档等。</p>
+                <p>依赖组件：element</p>
+                <p>如果网页采用的是默认的白色背景，不建议使用卡片面板</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>折叠面板</h2>
+        <div class="sectionDiv">
+            <div class="layui-collapse">
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">杜甫</h2>
+                    <div class="layui-colla-content layui-show">杜甫内容区域</div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">李清照</h2>
+                    <div class="layui-colla-content layui-show">李清照内容区域</div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">鲁迅</h2>
+                    <div class="layui-colla-content layui-show">鲁迅内容区域</div>
+                </div>
+            </div>
+            <div class="remark">
+                <p>通过对内容元素设置class="layui-show"来选择性初始展开某一个面板，element模块会自动呈现状态图标。</p>
+                <p>注意：折叠面板 依赖于element模块，否则无法进行功能性操作。</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>开启手风琴</h2>
+        <div class="sectionDiv">
+            <div class="layui-collapse" lay-accordion>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">语文</h2>
+                    <div class="layui-colla-content layui-show">语文内容</div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">数学</h2>
+                    <div class="layui-colla-content layui-show">数学内容</div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">英语</h2>
+                    <div class="layui-colla-content layui-show">英语内容</div>
+                </div>
+            </div>
+            <div class="remark">
+                <p>在折叠面板的父容器设置属性lay-accordion来开启手风琴，那么在进行折叠操作时，始终只会展现当前的面板。</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/libs/layui/layui.js"></script>
+    <script>
+        //注意：折叠面板  依赖element模块，否则无法进行功能性操作
+        layui.use('element',function () {
+            var element = layui.element;
+        })
+    </script>
+</body>
+</html>

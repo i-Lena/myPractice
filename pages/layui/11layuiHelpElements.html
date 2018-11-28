@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11layuiHelpElements--简单辅助元素</title>
+    <link rel="stylesheet" href="../../assets/libs/layui/css/layui.css">
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        section {
+            width: 90%;
+            margin: 10px auto;
+            background-color: #eeeeee;
+        }
+        section h2 {
+            padding: 10px;
+        }
+        .sectionDiv {
+            background-color: #fff;
+            border: 1px solid #eeeeee;
+            padding: 20px;
+        }
+        .remark {
+            line-height: 2em;
+            margin-top: 30px;
+        }
+        .remark ul li{
+            list-style: decimal;
+        }
+    </style>
+</head>
+<body>
+    <h1>layuiHelpElements--简单辅助元素</h1>
+    <section>
+        <h2>说明</h2>
+        <div class="sectionDiv">
+           <p>简单的辅助元素主要有：引用块、字符集区块、横线等等。</p>
+            <p>这些辅助元素无需依赖任何模块。</p>
+        </div>
+    </section>
+    <section>
+        <h2>引用区块</h2>
+        <div class="sectionDiv">
+            <blockquote class="layui-elem-quote">引用区域的文字</blockquote>
+            <blockquote class="layui-elem-quote layui-quote-nm">引用区域的文字</blockquote>
+        </div>
+    </section>
+    <section>
+        <h2>字段集区块</h2>
+        <div class="sectionDiv">
+            <fieldset class="layui-elem-field">
+                <legend>字段集区块-默认风格</legend>
+                <div class="layui-field-box">内容区域。</div>
+            </fieldset>
+            <fieldset class="layui-elem-field layui-field-title">
+                <legend>字段集区块-横线风格</legend>
+                <div class="layui-field-box">内容区域。</div>
+            </fieldset>
+        </div>
+    </section>
+    <section>
+        <h2>横线</h2>
+        <div class="sectionDiv">
+            <p>红色分割线</p>
+            <hr class="layui-bg-red">
+            <p>橙子色分割线</p>
+            <hr class="layui-bg-orange">
+            <p>墨绿分割线</p>
+            <hr class="layui-bg-green">
+            <p>青色分割线</p>
+            <hr class="layui-bg-cyan">
+            <p>蓝色分割线</p>
+            <hr class="layui-bg-blue">
+            <p>黑色分割线</p>
+            <hr class="layui-bg-black">
+            <p>灰色分割线</p>
+            <hr class="layui-bg-gray">
+        </div>
+    </section>
+</body>
+</html>

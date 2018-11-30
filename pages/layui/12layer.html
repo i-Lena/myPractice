@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12layui内置模块-弹出层layer</title>
+    <link rel="stylesheet" href="../../assets/libs/layui/css/layui.css">
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        section {
+            width: 90%;
+            margin: 10px auto;
+            background-color: #eeeeee;
+        }
+        section h2 {
+            padding: 10px;
+        }
+        .sectionDiv {
+            background-color: #fff;
+            border: 1px solid #eeeeee;
+            padding: 20px;
+        }
+        .remark {
+            line-height: 2em;
+            margin-top: 30px;
+        }
+        .remark ul li{
+            list-style: decimal;
+        }
+        fieldset {
+            margin-top: 20px;
+        }
+        .layui-field-box {
+            line-height: 2em !important;
+        }
+        /*
+        *.demo-class  layer  skin
+        **/
+        body .demo-class .layui-layer-title {
+            background: #c00;
+            color: #fff;
+            border: none;
+        }
+        body .demo-class .layui-layer-btn {
+            border-top: 1px solid #E9E7E7;
+        }
+        body .demo-class .layui-layer-btn a {
+            background: #333;
+        }
+        body .demo-class .layui-layer-btn .layui-layer-btn1 {
+            background: #999;
+        }
+    </style>
+</head>
+<body>
+    <h1>layui内置模块-弹出层layer</h1>
+    <section id="testContentPage">
+        <h2>使用场景</h2>
+        <div class="sectionDiv">
+            <p>由于layer可以独立使用，可以通过layui模块化使用，所以根据实际需求进行选择</p>
+            <table class="layui-table">
+                <colgroup>
+                    <col width="200">
+                    <col>
+                    <col width="300">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>场景</th>
+                        <th>用前准备</th>
+                        <th>调用方式</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>作为独立组件使用</td>
+                        <td>如果你只是单独想使用 layer，你可以去 layer 独立版本官网下载组件包。你需要在你的页面引入jQuery1.8以上的任意版本，并引入layer.js。</td>
+                        <td>通过script标签引入layer.js后，直接用即可。 参考：快速上手</td>
+                    </tr>
+                    <tr>
+                        <td>layui模块化使用</td>
+                        <td>如果你使用的是 layui，那么你直接在官网下载 layui 框架即可，无需引入 jQuery 和 layer.js，但需要引入layui.css和layui.js</td>
+                        <td>通过layui.use('layer', callback)加载模块</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>具体看以下实例：</p>
+            <div>
+                <button class="layui-btn" btn="showMsg">点击查看</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>基础参数</h2>
+        <div class="sectionDiv">
+            <p>基础参数主要指调用方法时用到的配置项，如：layer.open({content:''})，  layer.msg('',{time:3})等，
+            其中的content和time即是基础参数，以键值对形式存在，基础参数可合理应用于任何层类型中，不需要所有都去配置，大多数是可选的，
+                lay.open、layer.msg就是内置方法。注意，从2.3开始，无需通过layer.config来加载拓展模块。
+            </p>
+            <fieldset class="layui-elem-field">
+                <legend>type基本层类型</legend>
+                <div class="layui-field-box">
+                    <p>类型：Number，默认：0.</p>
+                    <p style="line-height: 2em;">
+                        layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）。
+                        若你采用layer.open({type: 1})方式调用，则type为必填项（信息框除外）。
+                    </p>
+                    <p>具体看以下五个例子：</p>
+                    <div style="margin-top: 20px;">
+                        <button id="test0" class="layui-btn">弹出一个提示层</button>
+                        <button id="test1" class="layui-btn">弹出一个页面层</button>
+                        <button id="test2" class="layui-btn">弹出一个iframe层</button>
+                        <button id="test3" class="layui-btn">弹出一个loading层</button>
+                        <button id="test4" class="layui-btn">弹出一个tips层</button>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>title-标题</legend>
+                <div class="layui-field-box">
+                    <p>类型：String/Array/Boolean，默认：‘信息’</p>
+                    <p>title支持三种类型的值，若你传入的是普通的字符串，如title: '我是标题',那么只会改变标题文本，若你还需要自定义标题区域样式，
+                    那么你可以 title: ['文本','font-size:18px;'],数组第二项可以写任意css样式，如果你不想显示标题栏，你可以title:false
+                    </p>
+                    <div>
+                        <button class="layui-btn" id="testTitle">测试改变标题样式</button>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>content-内容</legend>
+                <div class="layui-field-box">
+                    <p>类型：String/DOM/Array,默认：""。</p>
+                    <p>content可传入的值是灵活多变的，不仅可以传入普通的html内容，还可以指定DOM，更可以随着type的不同而不同。</p>
+                    <pre class="layui-code">
+/!*
+ 如果是页面层
+ */
+layer.open({
+  type: 1,
+  content: '传入任意的文本或html' //这里content是一个普通的String
+});
+layer.open({
+  type: 1,
+  content: $('#id') //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
+});
+//Ajax获取
+$.post('url', {}, function(str){
+  layer.open({
+    type: 1,
+    content: str //注意，如果str是object，那么需要字符拼接。
+  });
+});
+/!*
+ 如果是iframe层
+ */
+layer.open({
+  type: 2,
+  content: 'http://sentsin.com' //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+});
+/!*
+ 如果是用layer.open执行tips层
+ */
+layer.open({
+  type: 4,
+  content: ['内容', '#id'] //数组第二项即吸附元素选择器或者DOM
+});
+                    </pre>
+                    <div>
+                        <button class="layui-btn" type="button" id="testContent1">页面层-content-String</button>
+                        <button class="layui-btn" type="button" id="testContent2">页面层-content-Dom</button>
+                        <button class="layui-btn" type="button" id="testContent3">iframe层-content-url</button>
+                        <button class="layui-btn" type="button" id="testContent4">tip层-content-Array</button>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>skin-样式类名</legend>
+                <div class="layui-field-box">
+                    <p>类型：String，默认：""</p>
+                    <p>skin不仅允许你传入layer内置的样式class名，还可以传入你自定义的class名。这是一个很好的切入点,你可以借助skin完成不同的风格定制</p>
+                    <p>目前layer内置的skin有：layui-layer-lan   layui-layer-molv</p>
+                    <div>
+                        <button class="layui-btn" type="button" id="testSkin">skin-样式类名</button>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>area-宽高</legend>
+                <div class="layui-field-box">
+                    <p>类型：String/Array,默认："auto"</p>
+                    <p>在默认状态下，layer是宽高都自适应的，但当你只想定义宽度时，可以area:'500px'，高度仍然是自适应的。</p>
+                    <p>当你宽高都要定义时，可以使用area:['500px','300px']</p>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>offset-坐标</legend>
+                <div class="layui-field-box">
+                    <p>类型：String/Array,默认：垂直水平居中</p>
+                    <p>offset默认情况下不用设置。但是如果不想垂直水平居中，可以进行如下赋值。</p>
+                    <div>
+                        <table class="layui-table">
+                            <th>值</th>
+                            <th>备注</th>
+                            <tr>
+                                <td>offset:'auto'</td>
+                                <td>默认坐标，即垂直水平居中</td>
+                            </tr>
+                            <tr>
+                                <td>offset:'100px'</td>
+                                <td>只定义top坐标，水平保持居中</td>
+                            </tr>
+                            <tr>
+                                <td>offset:['100px','50px']</td>
+                                <td>同时定义top、left坐标</td>
+                            </tr>
+                            <tr>
+                                <td>offset:'t'</td>
+                                <td>快捷设置顶部坐标</td>
+                            </tr>
+                            <tr>
+                                <td>offset:'r'</td>
+                                <td>快捷设置右边缘坐标</td>
+                            </tr>
+                            <tr>
+                                <td>offset:'b'</td>
+                                <td>快捷设置底部坐标</td>
+                            </tr>
+                            <tr>
+                                <td>offset:'l'</td>
+                                <td>快捷设置左边缘坐标</td>
+                            </tr>
+                            <tr>
+                                <td>offset:'lt'</td>
+                                <td>快捷设置左上角</td>
+                            </tr>
+                            <tr>
+                                <td>offset:'rt'</td>
+                                <td>快捷设置右上角</td>
+                            </tr>
+                            <tr>
+                                <td>offset:'rb'</td>
+                                <td>快捷设置右下角</td>
+                            </tr>
+                            <tr>
+                                <td>offset:'lb'</td>
+                                <td>快捷设置左下角</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>icon-图标。信息框和加载层的私有参数</legend>
+                <div class="layui-field-box">
+                    <p>类型：Number,默认：-1（信息框）/ 0（加载层）</p>
+                    <p>信息框默认不显示图标，当想要显示图标时，默认皮肤可以传入0-6，如果是加载层，可以传入0-2.</p>
+                    <div>
+                        <button class="layui-btn" type="button" id="testIcon1">测试icon</button>
+                        <button class="layui-btn" type="button" id="testIcon2">测试icon</button>
+                        <button class="layui-btn" type="button" id="testIcon3">测试icon</button>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>btn-按钮</legend>
+                <div class="layui-field-box">
+                    <p>类型：String/Array ,默认：“确认”</p>
+                    <p>信息框模式时，btn默认是一个确认按钮，其他层类型则默认不显示，加载层和tips层则无效。</p>
+                    <p>当只想定义一个按钮时，可以使用btn:'我知道了！'</p>
+                    <p>当想要定义两个按钮时，可以btn:['yes','no']</p>
+                    <p>也可以定义很多的按钮，如：btn:['按钮1','按钮2','按钮3',...]</p>
+                    <p>按钮1的回调是yes,而从按钮2开始，则回调为btn2:function(){}，以此类推。</p>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>btnAlign-按钮排列</legend>
+                <div class="layui-field-box">
+                    <p>类型：String,默认：r</p>
+                    <p>可以快捷定义按钮的排列位置，btnAlign的默认值为r，即右对齐，该参数可支持的赋值如下：</p>
+                    <div>
+                        <table class="layui-table">
+                            <th>值</th>
+                            <th>备注</th>
+                            <tr>
+                                <td>btnAlign:'l'</td>
+                                <td>按钮左对齐</td>
+                            </tr>
+                            <tr>
+                                <td>btnAlign:'c'</td>
+                                <td>按钮居中对齐</td>
+                            </tr>
+                            <tr>
+                                <td>btnAlign:'r'</td>
+                                <td>按钮右对齐。默认值，不用设置。</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>closeBtn-关闭按钮</legend>
+                <div class="layui-field-box">
+                    <p>类型：String/Boolean，默认：1</p>
+                    <p>layer提供了两种风格的关闭按钮，可通过配置1和2来展示，如果不显示，则closeBtn: 0</p>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>shade - 遮罩</legend>
+                <div class="layui-field-box">
+                    <p>类型：String/Array/Boolean，默认：0.3</p>
+                    <p>即弹层外区域。默认是0.3透明度的黑色背景（'#000'）。如果你想定义别的颜色，可以shade: [0.8, '#393D49']；如果你不想显示遮罩，可以shade: 0</p>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>shadeClose - 是否点击遮罩关闭</legend>
+                <div class="layui-field-box">
+                    <p>类型：Boolean，默认：false</p>
+                    <p>如果你的shade是存在的，那么你可以设定shadeClose来控制点击弹层外区域关闭。</p>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>time - 自动关闭所需毫秒</legend>
+                <div class="layui-field-box">
+                    <p>类型：Number，默认：0</p>
+                    <p>默认不会自动关闭。当你想自动关闭时，可以time: 5000，即代表5秒后自动关闭，注意单位是毫秒（1秒=1000毫秒）</p>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field">
+                <legend>id - 用于控制弹层唯一标识</legend>
+                <div class="layui-field-box">
+                    <p>类型：String，默认：空字符</p>
+                    <p>设置该值后，不管是什么类型的层，都只允许同时弹出一个。一般用于页面层和iframe层模式</p>
+                </div>
+            </fieldset>
+        </div>
+    </section>
+
+
+    <script src="../../assets/libs/jquery/jquery-3.3.1.js"></script>
+    <script src="../../assets/libs/layui/layui.js"></script>
+    <script>
+        //layer模块
+        layui.use('layer',function () {
+            var layer = layui.layer;
+            $("[btn='showMsg']").click(function () {
+                layer.msg("我是点击查看的内容部分！");
+            });
+            
+            /*
+            *type基本层类型五个例子
+            **/
+            //弹出一个提示层
+            $("#test0").click(function () {
+                layer.msg("hello,我是提示层内容！");
+            });
+            //弹出一个页面层
+            $("#test1").click(function () {
+                layer.open({
+                    type: 1,
+                    title: '页面层标题',
+                    area : ['600px','360px'],
+                    shadeClose: true,  //点击遮罩层关闭
+                    content: '<div style="padding: 20px;">我是页面层的自定义内容</div>'
+                });
+            });
+            //弹出一个iframe层
+            $("#test2").click(function () {
+                layer.open({
+                   type: 2,
+                   title : 'iframe父子操作',
+                   maxmin: true,
+                   shadeClose : true,  //点击关闭遮罩层
+                   area: ['800px','520px'],
+                   content: '11layuiHelpElements.html'
+                });
+            });
+            //弹出一个loading层
+            $("#test3").click(function () {
+                var ii = layer.load();
+                //此处用setTimeout演示ajax的回调
+                setTimeout(function () {
+                    layer.close(ii);
+                },2000);
+            });
+            //弹出一个tips层
+            $("#test4").on('click',function () {
+                layer.tips("Hello 我是tips!",'#test4');
+            });
+
+            /*
+            *测试改变标题样式
+            **/
+            $("#testTitle").on('click',function () {
+               layer.open({
+                   type: 1,
+                   title: ['我是标题', 'background: green;color:red'],
+                   area: ['600px','360px'],
+                   shadeClose: true,  //点击遮罩层关闭
+                   content: '我是content内容'
+               });
+            });
+
+            /*
+            *测试改变content
+            **/
+            $("#testContent1").on('click',function () {
+               layer.open({
+                  type: 1,
+                  content: '传入的任意的文本或html',   //这里content是一个普通的String
+                  area: ['800px','600px']
+               });
+            });
+            $("#testContent2").on('click',function () {
+               layer.open({
+                  type: 1,
+                  content: $("#testContentPage"),  //这里content是一个DOM.注意：最好该元素要存放在body最外层，否则可能被其他的相对元素所影响
+                   area: ['800px','600px']
+               });
+            });
+            /*
+            * 测试iframe层
+            * */
+            $("#testContent3").on("click",function () {
+               layer.open({
+                  type: 2,
+                  content: '11layuiHelpElements.html', //这里的content是一个URL，如果不想让iframe出现滚动条，可以使用content:['http://url','no']
+                   area: ['800px','600px']
+               });
+            });
+            /*
+            * 测试tip层
+            * */
+            $("#testContent4").on("click",function () {
+                layer.open({
+                   type: 4,
+                   content: ["内容1","#testContentPage"],    //数组第二项吸附元素选择器或者DOM
+                    // area: ['800px','600px']
+                });
+            });
+            /*
+            * 测试skin
+            * */
+            $("#testSkin").on("click",function () {
+               layer.open({
+                  skin: 'demo-class'
+               });
+            });
+            /*
+            * 测试icon
+            * */
+            $("#testIcon1").on("click",function () {
+               layer.alert("HELLO!",{icon: 1});
+            });
+            $("#testIcon2").on("click",function () {
+                layer.msg("不开心!",{icon: 5});
+            });
+            $("#testIcon3").on("click",function () {
+                layer.load(1);   //风格1的加载
+            });
+        });
+
+        //加载code模块
+        layui.use("code",function () {  //加载code模块
+            layui.code();     //引用code方法
+        });
+    </script>
+</body>
+</html>

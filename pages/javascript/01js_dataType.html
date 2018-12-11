@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 10px auto;
+        }
+        section {
+            width: 90%;
+            margin: 0 auto;
+            background-color: #eeeeee;
+            /*padding: 20px 10px;*/
+        }
+        section h2 {
+            padding: 8px 10px;
+            margin: 0;
+        }
+        .sectionDiv {
+            background-color: #fff;
+            border: 1px solid #eeeeee;
+            padding: 20px;
+        }
+        .sectionRemark {
+            height: 100px;
+            border: 1px dashed #eeeeee;
+            line-height: 2em;
+            margin-top: 30px;
+            position: relative;
+        }
+        .sectionRemark h3 {
+            position: absolute;
+            top: -18px;
+            left: 15px;
+            font-weight: normal;
+            letter-spacing: 0.1em;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript---数据类型</h1>
+    <section>
+        <h2>基本数据类型</h2>
+        <div class="sectionDiv">
+            <div class="sectionContent">
+                <pre style="line-height: 1.5em;">
+                console.info(123+"类型"+typeof 123)；
+                console.info("12323" + "类型" +typeof "12323")；
+                console.info(true + "类型" + typeof true)；
+                console.info(null + "类型" + typeof null)；
+                console.info(undefined + "类型" +typeof undefined)；
+            </pre>
+                <pre style="line-height: 1.5em;">
+                结果：
+                123类型number
+                12323类型string
+                true类型boolean
+                null类型object
+                undefined类型undefined
+            </pre>
+            </div>
+            <div class="sectionRemark">
+                <h3>备注</h3>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <label for="">输入框1</label>
+            <input type="text" id="input1" onblur="changeContent2();">
+            <label for="">输入框2</label>
+            <input type="text" id="input2" onchange="changeContent3()">
+            <label for="">输入框3</label>
+            <input type="text" id="input3">
+        </div>
+    </section>
+    <script type="text/javascript">
+        function changeContent2() {
+            var input1 = document.getElementById("input1");
+            console.info(input1.value);
+            var input2 = document.getElementById("input2");
+            input2.value = input1.value;
+        }
+        function changeContent3() {
+            var input2 = document.getElementById("input2");
+            var input3 = document.getElementById("input3");
+            input3.value = input2.value;
+        }
+    </script>
+    <section>
+
+    </section>
+    <script>
+        console.info(123+"类型"+typeof 123)
+        console.info("12323" + "类型" +typeof "12323")
+        console.info(true + "类型" + typeof true)
+        console.info(null + "类型" + typeof null)
+        console.info(undefined + "类型" +typeof undefined)
+    </script>
+</body>
+</html>

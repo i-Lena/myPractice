@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20181210---JS数组操作</title>
+    <link rel="stylesheet" href="../../assets/libs/layui/css/layui.css" />
+    <link rel="stylesheet" href="../../assets/pages/dayDayUp/dayDayUpCommon.css" />
+</head>
+<body>
+    <h1>在数组arr中，查找值与item相等的元素出现的位置</h1>
+    <section>
+        <h2>代码：</h2>
+        <div class="sectionDiv">
+            <pre class="layui-code" lay-title="Javascript" lay-about="false">
+var arr1 = [5,8,9,4,2,66,44,457,75,3434,667,4,44,66,3,56,44,422,455,2];
+var index1 = findAllOccurences1(arr1,44);
+var index11 = findAllOccurences1(arr1,33);
+var index2 = findAllOccurences2(arr1,44);
+var index22 = findAllOccurences2(arr1,33);
+console.info(index1);
+console.info(index11);
+console.info(index2);
+console.info(index22);
+//方法1：找到和item值相等的元素并返回index
+function findAllOccurences1(arr,target) {
+    var index = [];
+    for(var i in arr) {
+        if(arr[i] === target) {
+            index.push(i);
+        }
+    }
+    return index;
+}
+//方法2：满足indexOf(target) != -1的元素输出index
+function findAllOccurences2(arr,target) {
+    var index = [];
+    var i = arr.indexOf(target);  //i为第一个满足要求的元素位置
+    while (i !== -1) {
+        index.push(i);
+        i = arr.indexOf(target,i+1);
+    }
+    return index;
+}
+            </pre>
+        </div>
+    </section>
+    <section>
+        <h2>结果：</h2>
+        <div class="sectionDiv">
+            <pre>
+                ["6", "12", "16"]
+                []
+                [6, 12, 16]
+                []
+            </pre>
+        </div>
+    </section>
+    <!--引入layui.js  使用layui-code-->
+    <script src="../../assets/libs/layui/layui.js"></script>
+    <script>
+        layui.use('code', function(){ //加载code模块
+            layui.code({
+                about: false  //隐藏标题后面的layui.code,设置为true即可看到隐藏了什么
+            }); //引用code方法
+        });
+    </script>
+    <script>
+        var arr1 = [5,8,9,4,2,66,44,457,75,3434,667,4,44,66,3,56,44,422,455,2];
+        var index1 = findAllOccurences1(arr1,44);
+        var index11 = findAllOccurences1(arr1,33);
+        var index2 = findAllOccurences2(arr1,44);
+        var index22 = findAllOccurences2(arr1,33);
+        console.info(index1);
+        console.info(index11);
+        console.info(index2);
+        console.info(index22);
+        //方法1：找到和item值相等的元素并返回index
+        function findAllOccurences1(arr,target) {
+            var index = [];
+            for(var i in arr) {
+                if(arr[i] === target) {
+                    index.push(i);
+                }
+            }
+            return index;
+        }
+        //方法2：满足indexOf(target) != -1的元素输出index
+        function findAllOccurences2(arr,target) {
+            var index = [];
+            var i = arr.indexOf(target);  //i为第一个满足要求的元素位置
+            while (i !== -1) {
+                index.push(i);
+                i = arr.indexOf(target,i+1);
+            }
+            return index;
+        }
+    </script>
+</body>
+</html>

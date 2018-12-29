@@ -81,6 +81,11 @@
             <input type="text" id="input3">
         </div>
     </section>
+    <section>
+        <div id="pane">
+
+        </div>
+    </section>
     <script type="text/javascript">
         function changeContent2() {
             var input1 = document.getElementById("input1");
@@ -103,6 +108,22 @@
         console.info(true + "类型" + typeof true)
         console.info(null + "类型" + typeof null)
         console.info(undefined + "类型" +typeof undefined)
+    </script>
+
+    <!--调试页面是否清除缓存-->
+    <script>
+
+    </script>
+    <!--调试js数据类型-->
+    <script>
+        var a=1;
+        debugger
+        if(function b() {
+
+        }) {
+            a += typeof(b);
+        }
+        console.info(a);  // 结果为1undefined
     </script>
 </body>
 </html>

@@ -160,6 +160,21 @@ form.on('submit(search)',function (data) {
 });
 
 /*
+* 查询按钮另一种写法：
+* */
+// button type="button" btn="searchBtn"
+$("[btn='searchBtn']").click(function () {
+    searchUser();
+});
+function searchUser() {
+    var param = {};
+    param.keyword = $("#xxx").val();
+    $("#xxxx").itable('reload',{
+        where : param
+    });
+}
+
+/*
 *   清除按钮
 * */
 // button type="reset" btn="clear"
@@ -196,6 +211,38 @@ function showTable() {
         serv: 'xxx'
     });
 }
+
+/*
+* 加载表格（动态生成表头）
+* */
+$(function () {
+    //创建layui表头
+    var cols = [
+        {type: 'checkbox', fixed: 'left'},
+        {type: 'userName', title: '姓名'},
+        {type: 'userJobNum', title: '工号'}
+    ];
+    //动态生成不同口径科室表头
+    $.service.get("/url",null,function (data) {
+        for(var k in data) {
+            if (data.hasOwnProperty(k)) {
+                cols.push({field: "Id_" + data[k]["id"],title: data[k]['dictName']});
+            }
+            cols.push({field:'isEnableName',title:'状态',width: 70});
+            cols.push({field: 'note',title: '备注'});
+            //线程栅栏
+            $("table").dependto("tableLoad","tableHead");
+        }
+    });
+    //调接口生成表格
+    $("table").dependon("tableLoad",["tableHead"],function () {
+        $("#users").itable({
+            url : '/xxx/xxx',
+            cols: cols,
+            serv: "mdm"
+        });
+    });
+});
 
 /*
 * 弹窗

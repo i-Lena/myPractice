@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
+    <meta http-equiv="expires" content="0">-->
+    <title>JS测试示例</title>
+</head>
+<body>
+    <div>
+        <button type="button" id="testReturn">测试返回值是否带回</button>
+    </div>
+    <div>
+        <button type="button" id="testRemoveCookie">测试页面是否自动清缓存</button>
+        <a href="javascript:void(0);" id="testRemoveCookie1">测试页面是否自动清缓存</a>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $("#testReturn").click(function () {
+            alert(111);
+            alert(sum(3,4));
+            var bbb = sum(5,6);
+            alert(bbb);
+        });
+
+        function sum(num1,num2) {
+            return num1 + num2;
+        }
+    </script>
+    <!--测试arguments-->
+    <script>
+        console.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        var length = 10;
+        function foo(){
+            console.log(this.length)
+        }
+        var object = {
+            length:1,
+            method:function(foo){
+                console.info(arguments[0]);
+                console.info(arguments[1]);
+                arguments[0]();        //this.length =参数长度
+                foo();
+                // console.log(foo());
+            }
+        }
+        object.method(foo,100);    //2,10
+        console.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    </script>
+
+    <script>
+        console.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        var name = "222";
+        var a = {
+            name: '111',
+            say:function () {
+                // debugger
+                console.info(this.name);
+            }
+        }
+        // debugger
+        var fun = a.say;
+        console.info(fun);
+        // debugger
+        fun();   // （1）222
+        a.say();  //（2）111
+        var b = {
+            name:'333',
+            say:function (fun) {
+                fun();
+            }
+        }
+        b.say(a.say);   //（3）222
+        // this -> b;
+        fun();  //（4）222
+        b.say = a.say;
+        b.say(); //（5）333
+        console.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+        /*解析
+        *（1）var fun = a.say <=> var fun = function(){console.info(this.name);}  此时this指向window，所以（1）处输出222
+        *（2）a.say <=>  此时a 的方法say:function(){this.name中的this指向的是对象a} ,所以（2）处输出a的name111
+        *（3）b.say(a.say) <=>相当于把a的say方法给了b的say方法，因为b中有say方法，此时a的say方法把b的say方法进行了覆盖，
+        * 所以此时的this指向全局的window,所以（3）处输出的name是全局变量name：222
+        *（4）fun();  <=>   this指向window  所以（4）处输出222
+        *（5）b.say = a.say;  <=> b的say方法用a的say方法进行了覆盖，b.say();之后，b的say方法里的this指向了b,b有自己的name属性333，
+        * 所以此时（5）输出了333
+        * */
+    </script>
+
+    <script>
+        console.info("========================================");
+       var num = 10;
+       var obj = {
+         num:0,
+         inner:{
+             num:6,
+             print:function () {
+                 console.info(this.num);
+             }
+         }
+       };
+       num = 88;
+       obj.inner.print();   //6
+       var fn = obj.inner.print;
+       fn();  //88   定义了fn:function(){console.info(this.num)}  此时this指向window
+       (obj.inner.print)();   // 6  this指向inner
+       (obj.inner.print = obj.inner.print)();
+       /*
+       88
+       相当于obj:{
+                inner:{
+                    print:function(){console.info(this.num)}
+                    }
+                }
+          此时this也指向了window
+       */
+        console.info("========================================");
+    </script>
+    <!--测试是否清除缓存-->
+    <script src="../../assets/pages/javascript/jsExample.js"></script>
+</body>
+</html>

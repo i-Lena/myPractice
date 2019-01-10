@@ -119,7 +119,92 @@
        */
         console.info("========================================");
     </script>
+    <!--测试闭包-->
+    <script>
+        console.info("************************************************");
+        for (var i = 0;i < 5; i++) {
+            setTimeout(function () {
+                console.info(i);
+            }(),i * 1000);
+        }
+        console.info("************************************************");
+    </script>
+    <!--测试作用域-->
+    <script>
+        console.info("--------------------------------------------------");
+        var name = 'window';
+
+        outer();
+
+        function outer(){
+            var name = 'outer';
+            inner();    //输出什么？
+        }
+
+        function inner(){
+            // console.log(name);  //window
+            console.log(this.name);   //window
+        }
+        console.info("--------------------------------------------------");
+    </script>
     <!--测试是否清除缓存-->
-    <script src="../../assets/pages/javascript/jsExample.js"></script>
+    <script src="../../assets/pages/javascript/jsExample.js?v=1"></script>
+    <!--
+    使用for-in循环显示BOM中window的所有属性
+    -->
+    <script>
+        // console.info(window);
+        for(var propName in window) {
+            // console.info(propName);
+            document.writeln(propName);
+            // document.write(window[propName]);
+        }
+    </script>
+    <script>
+        console.info("+++++++++++++++====================+++++++++++++++++++++");
+        debugger
+        function Foo() {
+            getName = function () {
+                console.info(1);
+            }
+            return this;
+        }
+        Foo.getName = function() {
+            console.info(2);
+        }
+        Foo.prototype.getName = function() {
+            console.info(3);
+        }
+        var getName = function () {
+            console.info(4);
+        }
+        function getName() {
+            console.info(5);
+        }
+        //请写出一下输出结果
+        Foo.getName();   //2
+        getName();         //4
+        Foo().getName();     //1
+        getName();             //1
+        new Foo.getName();      //2
+        new Foo().getName();      //3
+        new new Foo().getName();    //3
+        console.info("+++++++++++++++++=====================+++++++++++++++++");
+    </script>
+    <script>
+        console.info("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+        function a() {
+            y = function () {
+                X = 2;
+            };
+            return function () {
+                var x = 3;
+                y();
+                console.info(this.x);
+            }.apply(this,arguments);
+        }
+        a();
+        console.info("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+    </script>
 </body>
 </html>

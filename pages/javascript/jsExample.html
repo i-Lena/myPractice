@@ -156,13 +156,14 @@
         // console.info(window);
         for(var propName in window) {
             // console.info(propName);
-            document.writeln(propName);
+            // document.writeln(propName);
             // document.write(window[propName]);
         }
     </script>
+    <!--经典面试题   考察作用域 运算符优先级等-->
     <script>
         console.info("+++++++++++++++====================+++++++++++++++++++++");
-        debugger
+        // debugger
         function Foo() {
             getName = function () {
                 console.info(1);
@@ -191,6 +192,7 @@
         new new Foo().getName();    //3
         console.info("+++++++++++++++++=====================+++++++++++++++++");
     </script>
+    <!--每日一题  2019-01-10-->
     <script>
         console.info("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
         function a() {
@@ -203,8 +205,182 @@
                 console.info(this.x);
             }.apply(this,arguments);
         }
-        a();
+        a();    //undefined
         console.info("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+    </script>
+    <!--下面两个script代码块测试作用域执行环境的  -->
+    <script>
+        console.info("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        console.log(funn)   //报错  funn is not defined 这一行报错后，213行214行都不执行  推测：一行报错后，script内的报错行后的代码都不执行
+
+        console.log(person)   //报错  person is not defined
+        console.info("211行报错后测试这行是否执行");
+    </script>
+    <script>
+        console.log(person)  //undefined
+
+        console.log(funn)   //f funn(){console.info(person);var person = "Tom";console.log(person)}
+
+        var person = "Eric";
+
+        console.log(person)  //Eric
+
+        function funn() {
+            console.log(person)
+            var person = "Tom";
+            console.log(person)
+        }
+
+        funn()    //undefined  Tom
+
+        console.log(person)   //Eric
+        console.info("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+    </script>
+    <!--测试执行环境-->
+    <script>
+        console.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        var a = 30;
+
+        function test11() {
+            // debugger
+            var a = 10;
+
+            function innerTest() {
+                var b = 20;
+                console.info(a + b);
+                /*
+                30  console.info(a + b)执行过程 提升变量声明 var a;在函数作用域innerTest内没有a的赋值，
+
+                */
+
+
+                return a + b
+            }
+
+            innerTest();
+        }
+        // debugger
+        test11();
+        console.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    </script>
+    <script>
+        console.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        function fun(a, b) {
+            var num = 1;
+
+            function test() {
+
+                console.log(num)
+
+            }
+            test();
+        }
+
+        fun(2, 3)
+        console.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+    </script>
+    <script>
+        console.info("############ 测试this与arguments ################");
+        var length = 10;
+        function fn() {
+            console.info(this.length);
+        }
+        var obj = {
+            length: 5,
+            method: function fn(fn) {
+                console.info(fn);
+                fn();
+                arguments[0]();
+                console.info(arguments);
+            }
+        };
+        obj.method(fn,1);
+        console.info("######################################");
+    </script>
+    <script>
+        console.info("%%%%%%%%%%%%%%%%  手写冒泡排序 %%%%%%%%%%%%%%%%%%%%%%%");
+        var num = 0;
+        function bubbleSort(arr) {
+            for(var i = arr.length; i > 1; i --) {
+                for(j=0;j < i; j++) {
+                    if(arr[j] > arr[j+1]) {
+                        var temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                        num ++;
+                    }
+                }
+            }
+            console.info(num);
+            return arr;
+        }
+        // var arr1 = [9,1,4,3,8,5,6,2,0,7];
+        // console.info(arr1);
+        var arr2 = [9,8,7,6,5,4,3,2,1,0];
+        console.info(arr2);
+        console.info(bubbleSort(arr2));
+        var arr22 = arr2.reverse();
+        console.info(arr22);
+
+        console.info("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+    </script>
+    <script>
+        console.info("&&&&&&&&&&&&&&&&&&2019-01-14&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+        function fun(n,o) {
+            // debugger
+            console.info(o);
+            return {
+                fun: function (m) {
+                    return fun(m,n);
+                }
+            }
+        }
+        var a = fun(0);  //undefined
+        a.fun(1);   //0
+        a.fun(2);  //0
+        a.fun(3);  //0
+        var b=fun(0).fun(1).fun(2).fun(3);  //undefined,0,1,2
+        var c = fun(0).fun(1);  //undefined,0
+        c.fun(2);  //1
+        c.fun(3);  //1
+        console.info("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+    </script>
+    <script>
+        console.info("@@@@@@@@@@@@@@@@   测试闭包  @@@@@@@@@@@@@@@@@@@@@@");
+        function f1() {
+            var a = 999;
+            function f2() {
+                console.info(a);
+            }
+            return f2;
+        }
+        console.info(f1);  //f f1(){ var a = 999;function f2(){console.info(a)} return f2; }
+        var result = f1();
+        console.info(result);  //f f2(){ console.info(a);}
+        result();  //999
+        console.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+
+
+        var inner;
+        function outer(){
+            var a=250;
+            inner=function(){
+                console.info(a);//这个函数虽然在外面执行，但能够记忆住定义时的那个作用域，a是250
+            }
+        }
+        outer();
+        var a=300;
+        inner();//一个函数在执行的时候，找闭包里面的变量，不会理会当前作用域。
+    </script>
+    <script>
+        console.info("^^^^^^^^测试运算符与字符串拼接^^^^^^^^^");
+        console.info(1+"2"+"2");       //122
+        console.info(1 + + "2"+"2");  //32
+        console.info(1 + -"1"+"2");   //02
+        console.info(+"1"+"1"+"2");   //112
+        console.info("A"-"B"+"2");   //NaN2
+        console.info("A"-"B"+2);     //NaN
+        console.info("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
     </script>
 </body>
 </html>

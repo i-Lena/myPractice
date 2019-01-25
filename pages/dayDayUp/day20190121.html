@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js将字符串“border-left-color”转化为驼峰命名法</title>
+</head>
+<body>
+
+<script>
+    //js将字符串"border-left-color"转化为驼峰命名法
+    <!-- 方法一：使用split(),substring(),join() -->
+    var str = "border-left-color";
+    transAaaBbb(str);
+    function transAaaBbb(str) {
+        var arr = str.split("-");
+        console.info(str); //"border-left-color" split()函数 将字符串转化为数组元素   不改变源字符串
+        console.info(arr); //['border','left','color']
+        for(var i = 1; i < arr.length; i++) {
+            arr[i] = arr[i].substring(0,1).toLocaleUpperCase() + arr[i].substring(1);
+            console.info(arr[i]); //Left Color
+        }
+        var arr1 = arr.join("");
+        console.info(arr); //["border","Left","Color"]  join()函数 将数组转化为字符串 不改变原数组
+        console.info(arr1); //borderLeftColor
+    }
+</script>
+<script>
+    <!-- 方法二：使用正则 -->
+    var str="border-bottom-color";
+    function tf(str){
+        var re=/-(\w)/g;
+        str=str.replace(re,function($0,$1){
+            //$0: 匹配成功后的整体结果，此例中指 -b,-c
+            //$1：匹配成功的第一个分组
+            console.info($0);
+            console.info($1);
+            console.info($0.toUpperCase());
+            console.info($1.toUpperCase());
+            return $1.toUpperCase();
+        });
+        console.info(str);
+    };
+    tf(str);
+    /*注意
+    *  \w 代表匹配任意单词（包括下划线）的字符
+       -(\w)代表匹配任意以“-”开头的单词  其中的括号表示子匹配，
+       g代表全局匹配
+    *
+    * */
+</script>
+</body>
+</html>

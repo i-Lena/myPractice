@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS画饼图</title>
+    <style>
+        .pie {
+            width: 100px;
+            height: 100px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background-color: yellowgreen;
+            background-image: linear-gradient(to right,transparent 50%,#655 0);
+        }
+        .pie::before {
+            content: "";
+            display: block;
+            margin-left: 50%;
+            height: 100%;
+            border-radius: 0 100% 100% 0 / 50%;
+            background-color: inherit;
+            transform-origin: left;
+            /*transform: rotate(.1turn);*/
+            transform: rotate(.2turn);
+            /*transform: rotate(.3turn);*/  /* 360 * 0.3 = 108deg */
+        }
+        .pie2 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: yellowgreen;
+            background-image: linear-gradient(to right, transparent 50%,#ccc 0);
+        }
+        .heart {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .heart:before, .heart:after {
+            position: absolute;
+            content: "";
+            top: 50px;  /*距离上个元素的距离，如果没有，可为0*/
+            width: 50px;
+            height: 80px;
+            background: red;
+            border-radius: 80px 80px 0 0;
+        }
+        .heart::before {
+            left: 50px;
+            transform-origin: 0 100%;
+            transform: rotate(-45deg);
+        }
+        .heart::after {
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="pie"></div>
+    <div class="pie2"></div>
+    <div class="heart"></div>
+</body>
+</html>

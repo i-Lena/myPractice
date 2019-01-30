@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利用CSS绘制饼图进程图</title>
+    <style>
+        .pie {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: yellowgreen;
+            background-image: linear-gradient(to right, transparent 50%, currentColor 0);
+            color: #ccc;
+            position: relative;
+        }
+        .pie::before {
+            content: '';
+            display: block;
+            margin-left: 50%;
+            height: 100%;
+            border-radius: 0 100% 100% 0 / 50%;
+            /*transform: rotate(0.2turn);*/
+            transform-origin: left;
+            background-color: inherit;
+            animation: spin 3s linear infinite,bg 6s step-end infinite;
+        }
+        @keyframes spin {
+          to {transform: rotate(0.5turn);}
+        }
+        @keyframes bg {
+            50% {
+                background-color: currentColor;}
+        }
+        .pie1 {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -75px;
+            margin-top: -75px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pie"></div>
+    <div class="pie" style="margin-top: 30px;">
+        <div class="pie1"></div>
+    </div>
+</body>
+</html>

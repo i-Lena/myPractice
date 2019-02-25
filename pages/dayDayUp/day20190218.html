@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>粘性定位</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        dl {
+            margin: 0;
+            /*padding: 24px 0 0 0;*/
+        }
+        dt {
+            background: #B8C1C8;
+            border-top: 1px solid #717d85;
+            border-bottom: 1px solid #989ea4;
+            color: #fff;
+            margin: 0;
+            padding: 2px 0 0 12px;
+            /*position: -webkit-sticky;*/
+            position: sticky;
+            top: -1px;  /* 必不可少 可以改变其值查看具体作用，例如：可修改为-10px 或者 100px; */
+        }
+        dd {
+            margin: 0;
+            padding: 0 0 0 12px;
+        }
+        dd + dd {
+            border-top: 1px solid #CCC
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <dl>
+            <dt>一.101</dt>
+            <dd>10101</dd>
+            <dd>10102</dd>
+            <dd>10103</dd>
+            <dd>10104</dd>
+            <dd>10105</dd>
+            <dd>10106</dd>
+            <dd>10107</dd>
+        </dl>
+        <dl>
+            <dt>二.201</dt>
+            <dd>20101</dd>
+            <dd>20102</dd>
+            <dd>20103</dd>
+            <dd>20104</dd>
+            <dd>20105</dd>
+            <dd>20106</dd>
+            <dd>20107</dd>
+        </dl>
+        <dl>
+            <dt>三.301</dt>
+            <dd>30101</dd>
+            <dd>30102</dd>
+            <dd>30103</dd>
+            <dd>30104</dd>
+            <dd>30105</dd>
+            <dd>30106</dd>
+            <dd>30107</dd>
+        </dl>
+        <dl>
+            <dt>四.401</dt>
+            <dd>40101</dd>
+            <dd>40102</dd>
+            <dd>40103</dd>
+            <dd>40104</dd>
+            <dd>40105</dd>
+            <dd>40106</dd>
+            <dd>40107</dd>
+        </dl>
+        <dl>
+            <dt>五.501</dt>
+            <dd>50101</dd>
+            <dd>50102</dd>
+            <dd>50103</dd>
+            <dd>50104</dd>
+            <dd>50105</dd>
+            <dd>50106</dd>
+            <dd>50107</dd>
+        </dl>
+        <dl>
+            <dt>六.601</dt>
+            <dd>60101</dd>
+            <dd>60102</dd>
+            <dd>60103</dd>
+            <dd>60104</dd>
+            <dd>60105</dd>
+            <dd>60106</dd>
+            <dd>60107</dd>
+        </dl>
+        <dl>
+            <dt>七.701</dt>
+            <dd>70101</dd>
+            <dd>70102</dd>
+            <dd>70103</dd>
+            <dd>70104</dd>
+            <dd>70105</dd>
+            <dd>70106</dd>
+            <dd>70107</dd>
+        </dl>
+        <dl>
+            <dt>八.801</dt>
+            <dd>80101</dd>
+            <dd>80102</dd>
+            <dd>80103</dd>
+            <dd>80104</dd>
+            <dd>80105</dd>
+            <dd>80106</dd>
+            <dd>80107</dd>
+        </dl>
+        <dl>
+            <dt>九.901</dt>
+            <dd>90101</dd>
+            <dd>90102</dd>
+            <dd>90103</dd>
+            <dd>90104</dd>
+            <dd>90105</dd>
+            <dd>90106</dd>
+            <dd>90107</dd>
+        </dl>
+    </div>
+</body>
+</html>

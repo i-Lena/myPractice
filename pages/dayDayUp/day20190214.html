@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>去除字符串中的字母</title>
+</head>
+<body>
+    <div>
+        <p>去除字符串中的字母</p>
+        <p>例如：去除下列字符串中的字母，str="a12f3b,a456h@345d" </p>
+    </div>
+<script>
+    /* 
+    * 去除字符串中的字母（使用正则表达式进行替换）
+    * */
+    var str = "a12f3b,a456h@345d";
+    removeLetter(str);
+    function removeLetter(str) {
+        console.info(str);
+        var reg = /[a-zA-Z]/g;
+        str = str.replace(reg,"");
+        console.info(str);
+    }
+</script>
+</body>
+</html>

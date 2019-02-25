@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计字符串中字符出现次数最多的字符</title>
+</head>
+<body>
+    <div>
+        <p>统计字符串中字符出现次数最多的字符</p>
+        <p>例如：写出一个函数，查找出str="aaaabbbddbbbbcccffe";<!--连续-->出现次数最多的字符，打印出来，以及打印出它出现的次数。</p>
+    </div>
+
+    <script>
+        var str="aaaabbbddbbbbcccffe";
+        countChar(str);
+        function countChar(str) {
+            var arr = str.split("");
+            console.info(str);
+            console.info(arr);
+            var cmpChar = [];  //记录字符串中出现的字符
+            var cmpCount = [];  //统计字符串中出现字符的个数
+            for(var i=0;i<str.length;i++) {
+                if(cmpChar.indexOf(arr[i]) == -1) {
+                    cmpChar.push(arr[i]);
+                    cmpCount.push(0);
+                }
+            }
+            console.info(cmpChar);
+
+            for(var j=0;j<cmpChar.length;j++) {
+                for(var k=0;k<arr.length;k++) {
+                    if(cmpChar[j] == arr[k]) {
+                        cmpCount[j]++;
+                    }
+                }
+            }
+            console.info(cmpCount);
+
+            var index = 0;  //记录出现次数最多的字符在cmpChar中的索引
+            var max = cmpCount[0];
+            for(var m=0;m<cmpCount.length;m++) {
+                if(max < cmpCount[m]) {
+                    var max = cmpCount[m];
+                    index = m;
+                }
+            }
+            console.info(index);
+
+            console.info("出现最多次数的字符是：" + cmpChar[index]);
+            console.info("出现的次数是："+ max);
+
+
+        }
+    </script>
+
+    <script>
+        /*
+        * json方式实现统计字符串中出现次数最多的字符及次数
+        * */
+        var strSrc = "aaaabbbddbbbbcccffe";
+        maxChar(strSrc);
+        function maxChar(str) {
+            var json = {};
+            for(var i=0;i<str.length;i++) {
+                var k = str[i]; //k是所有字符，字符串也跟数组一样可以通过中括号下标方法取到每个子元素
+                if(json[k]) {
+                    json[k]++;  //json里面有这个字符时，把这个字符的数量+1
+                }else {
+                    json[k] = 1;
+                }
+            }
+            var num = 0;
+            var value = null;
+            for(var k in json) {
+                if(json[k] > num) {
+                    num = json[k];
+                    value = k;
+                }
+            }
+            console.info(json);
+            console.info("出现最多的字符是：" + value + ",出现次数是：" + num);
+        }
+    </script>
+
+</body>
+</html>
+

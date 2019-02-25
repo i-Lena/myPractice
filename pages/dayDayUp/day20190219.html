@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域</title>
+</head>
+<body>
+<script>
+    function makeNoSense(x) {
+        this.x = x;
+    }
+    makeNoSense(5); //此处<=>window.makeNoSense(5); 先进行声明var x; this.x = x;
+    console.info(x);  //5
+    function test() {
+        this.x = 1;
+        console.info(this.x);
+    }
+    test(); //1  此处<=>window.test(); this.x = 1;此时输出的this.x的值为1;
+</script>
+<script>
+    function Foo() {
+        getName = function () {
+            console.info(1);
+        }
+        return this;
+    }
+    Foo.getName = function () {
+        console.info(2);
+    }
+    Foo.prototype.getName = function () {
+        console.info(3);
+    }
+    var getName = function() {
+        console.info(4);
+    }
+    function getName() {
+        console.info(5);
+    }
+
+    //请写出以下输出结果：
+    Foo.getName(); //2
+    getName();   //5? 错误，函数声明提前后 4会覆盖5  正确为 //4
+    Foo().getName();  //3 错误  为 //1
+    getName();  //4  错误  在上一行Foo()执行时，将getName的值更改了  正确为//1
+    new Foo.getName();  //2
+    new Foo().getName();  //3
+    new new Foo().getName();  //3
+
+</script>
+</body>
+</html>

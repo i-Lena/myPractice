@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现斐波那契数列</title>
+</head>
+<body>
+<script>
+    /*
+    * 非递归方式（直接循环）
+    * */
+    function getNthFibonacci (n) {
+        if (n < 0) throw new Error('输入的数字不能小于0');
+        let dataMinusOne = 1,
+            dataMinusTwo= 1,
+
+            data;
+        if (n == 0) return dataMinusTwo;
+        if (n == 1) return dataMinusOne;
+        for (var i=2;i<=n;i++) {
+            data = dataMinusOne + dataMinusTwo;
+
+            dataMinusOne = dataMinusTwo;
+            dataMinusTwo = data;
+        }
+        return data;
+    }
+    console.info(getNthFibonacci(5));
+</script>
+<script>
+    /*
+    * 递归方式
+    * */
+    function fibonacci(n) {
+        if (n < 0) {
+            throw new Error('输入的数字不能小于0');
+        }
+        if (n == 0) {
+            return 1;
+        }
+        if (n == 1) {
+            return 1;
+        }
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
+    console.info(fibonacci(5));
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断是否是回文字符串</title>
+
+</head>
+<body>
+    <div>判断是否是回文字符串</div>
+    <div>
+        <p>回文字符串：即字符串从前往后读和从后往前读字符顺序是一致的。</p>
+        <p>如：字符串abccba，从前往后读是a-b-c-c-b-a；从后往前读也是a-b-c-c-b-a</p>
+    </div>
+<script>
+    /*
+    * 方法一：先把字符串进行反转，再和源字符串进行比较，一致即为回文串，否则不是回文串
+    * */
+    console.info("============ 方法一 ===========");
+    var str = "abccba";
+    var strR = "abcDba";
+    plalindrome(str);
+    plalindrome(strR);
+    function plalindrome(str) {
+        var strPlalindrome = str.split("").reverse().join("");
+        // console.info(strPlalindrome);
+        if(str == strPlalindrome) {
+            console.info(str + "是回文串！");
+        }else {
+            console.info(str + "不是回文串！");
+        }
+    }
+    /*
+    * 方法二：将字符串的头尾进行比较来判断是否是回文串
+    * */
+    console.info("============ 方法二 ===========");
+    plalindrome2(str);
+    plalindrome2(strR);
+    function plalindrome2(str) {
+        var flag = 1;
+        for(var i = 0; i < str.length; i++) {
+            if(str[i] != str[str.length - 1 - i]) {
+                 flag = 0;
+            }
+        }
+        if(flag) {
+            console.info(str + "是回文串！");
+        }else  {
+            console.info(str + "不是回文串！");
+        }
+    }
+</script>
+</body>
+</html>

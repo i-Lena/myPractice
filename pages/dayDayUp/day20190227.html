@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button type="button" onclick="resetTime();">重置</button>
+    <div class="box" id="second">9</div>
+
+    <!--<script>
+        var secondDiv = document.getElementById("second");
+        var second = secondDiv.innerText;
+        console.info(second);
+
+        setTime();
+
+        function setTime() {
+            setInterval(function () {
+                if(second > 0) {
+                    second &#45;&#45;;
+                    secondDiv.innerText = second;
+                }
+                if(second == 0) {
+                    secondDiv.innerText = 59;
+                    setTime();
+                }
+            },1000);
+        }
+        function resetTime() {
+            secondDiv.innerText = 59;
+        }
+    </script>-->
+    <script>
+        var secondDiv = document.getElementById("second");
+        var second = secondDiv.innerText;
+        console.info(second);
+
+        var countDown = 60;
+        function setTime() {
+            if(countDown == 0) {
+                countDown = 60;
+            }else {
+                secondDiv.innerText = countDown;
+                countDown --;
+            }
+            var timer = setTimeout(function () {
+                setTime();
+            },1000);
+        }
+        setTime();
+        function resetTime() {
+            clearTimeout(timer);
+            countDown = 60;
+            setTime();
+        }
+
+    </script>
+</body>
+</html>

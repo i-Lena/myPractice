@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编写函数：返回一个长度为N的随机数组成的字符串</title>
+</head>
+<body>
+<script>
+    /*
+    * 编写函数：返回一个长度为N的随机数组成的字符串
+    * 方法一：
+    * （1）生成N个随机数，组成一个长度为N的数组
+    * （2）将数组通过join()转化成字符串返回
+    * */
+    function returnRandomString(n) {
+        var random = [];
+        for(var i=0;i<n;i++) {
+            var randomValue = Math.floor(Math.random()* 10);
+            random.push(randomValue);
+            //console.info(random);
+        }
+        var randomString = random.join("");
+        // console.info(randomString);
+        return randomString;
+    }
+    console.info(returnRandomString(8));
+</script>
+<script>
+    /*
+   * 编写函数：返回一个长度为N的随机数组成的字符串
+   * 方法二：
+   * （1）返回一个随机数，取几位即扩大10的几次方倍
+   * （2）取整，与空字符串拼接进行转化为字符串
+   * （3）如果第一位为0，取整时会丢一位，同理，首位几个零会丢几位
+   * （4）如果得到的字符串length比n小，小几位，丢了几个0，则在前面添几个0
+   * （5）注意：返回的函数应为立即执行函数
+   * */
+    function random(n) {
+        let max = 1;
+        for(let i=0;i<n;i++) {
+            max *= 10;
+        }
+        return (function() {
+            var elem = Math.random()*max;
+            console.info(elem); //通过此步打印可看出生成的随机数
+            let str = "" + parseInt(elem);
+            if(str.length < n) {
+                let count = n - str.length;
+                for(let i=0;i<count;i++) {
+                    str = "0" + str;
+                }
+            }
+            return str;
+        })();
+    }
+    console.info(random(5));
+</script>
+</body>
+</html>

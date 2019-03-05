@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包的应用</title>
+</head>
+<body>
+<script>
+    (function (x) {
+        return (function (y) {
+            console.info(x);   //1
+        })(2);
+    })(1);
+</script>
+</body>
+</html>

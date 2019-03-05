@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function应用</title>
+</head>
+<body>
+    <div>
+        <p>写一个sum方法，当使用下面的语法调用时它将正常工作</p>
+        <p>console.info(sum(2,3));   //5 </p>
+        <p>console.info(sum(2)(3));   //5 </p>
+    </div>
+
+    <script>
+        /*
+        * sum1(2,3)
+        * */
+        function sum1(num1,num2) {
+            return num1 + num2;
+        }
+        console.info(sum1(2,3));
+
+        /*
+        * sum2(2)(3)
+        * */
+        function sum2(num1) {
+            var count = num1;
+            var temp = function (num2) {
+                count = count + num2;
+                return count;
+            }
+            return temp;
+        }
+        console.info(sum2(2)(3));
+    </script>
+    <script>
+        /*
+        * 方法一：通过arguments参数个数
+        * */
+        function sum(num1) {
+          if(arguments.length == 2) {
+              return arguments[0] + arguments[1];
+          }
+          if(arguments.length == 1) {
+              return function (num2) {
+                  return num1+num2;
+              }
+          }
+        }
+        console.info(sum(4,5));
+        console.info(sum(4)(5));
+
+        /*
+        * 方法二：判断有没有多个参数
+        * */
+        function sum(x,y) {
+            if(y == undefined) {
+                return function (y) {
+                    return x + y;
+
+                }
+            } else {
+                return x + y;
+            }
+        }
+        console.info(sum(5,6));
+        console.info(sum(5)(6));
+    </script>
+</body>
+</html>

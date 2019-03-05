@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实时监听input的改变</title>
+</head>
+<body>
+    <input type="text" id="ipt1" onchange="setValue();"/>
+    <input type="text" id="ipt2" />
+    <script>
+        var ipt1 = document.getElementById("ipt1");
+        var ipt2 = document.getElementById("ipt2");
+
+        function setValue() {
+            ipt2.value = ipt1.value;
+        }
+    </script>
+</body>
+</html>

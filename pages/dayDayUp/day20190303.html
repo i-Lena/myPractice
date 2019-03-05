@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作数组</title>
+</head>
+<body>
+<script>
+    /*
+    * 移除数组arr中所有值与item相等的元素。不要直接修改数组arr，结果返回新的数组
+    * 方法一：
+    * （1）定义一个空数组arrNew
+    * （2）将与item不相等的元素放入arrNew
+    * */
+    var arr = [1,4,64,3,6,43,4,6,4,8,0,2,65,3,4];
+    function removeEqualItem(arr,item) {
+        var arrNew =[];
+        for(var i=0;i<arr.length;i++) {
+            if(item != arr[i]) {
+                arrNew.push(arr[i]);
+            }
+        }
+        return arrNew;
+    }
+    console.info(arr);
+    console.info(removeEqualItem(arr,4));
+</script>
+<script>
+    /*
+    * 移除数组arr中所有值与item相等的元素。不要直接修改数组arr，结果返回新的数组
+    * 方法二：
+    * （1）定义一个新数组arrNew,是对arr的浅复制
+    * （2）使用splice(startIndex,deleteNum,addValue[可选])进行删除等于item的值
+    * */
+    var arr = [1,4,64,3,6,43,4,6,4,8,0,2,65,3,4];
+    function removeEqualItem(arr,item) {
+        var arrNew = arr;
+        for(var k in arrNew) {
+            if (item == arrNew[k]) {
+                arrNew.splice(k,1);
+            }
+        }
+        return arrNew;
+    }
+    console.info(arr);
+    console.info(removeEqualItem(arr,4));
+</script>
+<script>
+    /*
+    * 移除数组arr中所有值与item相等的元素。不要直接修改数组arr，结果返回新的数组
+    * 方法三：使用filter(function(){})
+    * （1）使用Array.filter(function(element,index[可选],arr[可选]){ },thisArg[可选]);
+    * （2）编写过滤方法并返回
+    * */
+    var arr = [1,4,64,3,6,43,4,6,4,8,0,2,65,3,4];
+    function removeEqualItem(arr,item) {
+        return arr.filter(function (element) {
+            return element != item;
+        });
+    }
+    console.info(arr);
+    console.info(removeEqualItem(arr,4));
+</script>
+</body>
+</html>

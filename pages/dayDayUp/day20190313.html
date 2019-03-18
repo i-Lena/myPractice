@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一行代码实现数组去重</title>
+</head>
+<body>
+<script>
+    var arr = [1,2,3,4,5,6,7,8,9,0,3,2,3,5,6,4,4];
+    var arrNew = new Set(arr);
+    console.info(arrNew);
+</script>
+<script>
+    var arr = [1,2,3,4,5,6,7,8,9,0,3,2,3,5,6,4,4];
+    var arrNew = [...new Set(arr)];
+    console.info(arrNew);
+</script>
+</body>
+</html>

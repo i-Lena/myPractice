@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问给定页面的所有元素</title>
+</head>
+<body>
+
+<script>
+    /*
+    * 该函数的参数：一个DOM元素，一个回调函数（以DOM元素作为参数）
+    * 访问树中的所有元素（DOM）是经典的深度优先搜索算法应用程序。
+    * */
+    function traverse(p_element,p_callback) {
+        p_callback(p_element);
+        var list = p_element.children;
+        for(var i=0;i<list.length;i++) {
+            traverse(list[i],p_callback);  //recursive
+        }
+    }
+</script>
+</body>
+</html>

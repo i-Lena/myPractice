@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量提升</title>
+</head>
+<body>
+<script>
+    /*
+    * 考虑下面的代码。输出的是什么？为什么？
+    * */
+    (function () {
+        try {
+            throw new Error();
+        }catch (x) {
+            var x =1,y=2;
+            console.info(x);  //1
+        }
+        console.info(x);  //undefined
+        console.info(y);  //2
+    })();
+</script>
+</body>
+</html>

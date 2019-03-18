@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = {n:1};
+    var b = a;
+    a.n = a = {m:2};
+    console.info("a.n:" + a.n);  // a.n:undefined
+    console.info("a.m:" + a.m);  // a.m:2
+    console.info("b.n:" + b.n);  //b.n:[object Object]
+    console.info("b.n.m:" + b.n.m);  //2
+    console.info("b.m:" + b.m);  //b.m:undefined
+    console.dir(a);   //Object {m:2}
+    console.dir(b);   //Object { n: {m:2} }
+</script>
+<script>
+    //根据下列代码回答问题
+    var a = [1,2,3];
+    a[10] = 99;    //这会导致崩溃吗？    //不会崩溃
+    console.info(a[6]);   //这会输出什么？   //undefined
+    console.info(a);   //[1,2,3,undefined,undefined,undefined,undefined,undefined,undefined,undefined,99]
+</script>
+</body>
+</html>

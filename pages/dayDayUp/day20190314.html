@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        #box{
+            background-color:gray;
+            height:20px;
+            overflow:hidden;
+        }
+        .a{
+            background-color:red;
+            width:0;
+            height:20px;
+            margin: 0 auto;
+            transition:width .8s;
+            -webkit-transition:width .8s;
+        }
+        #box:hover .a{
+            width:100%;
+            transition:all .8s;
+            -webkit-transition:width .8s;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="a"></div>
+</div>
+<script>
+    /*
+    * 以下代码的输出是什么？解释你的答案。
+    * */
+    var a = {},
+        b = {key:'b'},
+        c= {key: 'c'};
+        a[b] = "123";
+        a[c] = "456";
+        console.info(a[b]); //456
+
+</script>
+</body>
+</html>

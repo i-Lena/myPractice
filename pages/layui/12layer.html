@@ -108,6 +108,7 @@
                         若你采用layer.open({type: 1})方式调用，则type为必填项（信息框除外）。
                     </p>
                     <p>具体看以下五个例子：</p>
+                    <p>弹出层输入的文本是：<span class="showInputText"></span></p>
                     <div style="margin-top: 20px;">
                         <button id="test0" class="layui-btn">弹出一个提示层</button>
                         <button id="test1" class="layui-btn">弹出一个页面层</button>
@@ -363,7 +364,24 @@ layer.open({
                     title: '页面层标题',
                     area : ['600px','360px'],
                     shadeClose: true,  //点击遮罩层关闭
-                    content: '<div style="padding: 20px;">我是页面层的自定义内容</div>'
+                    content: '<div style="padding: 20px;">我是页面层的自定义内容</div>'+'<div><span>请输入内容：</span><input type="text" class="inputText" value="" /></div>',
+                    btn:["确定","取消"],
+                    btn1: function (index,layero) {
+                        var inputText = top.$(".inputText").val();
+                        console.info(inputText);
+                        // var parentLayer = layer.parent();
+                        // $(parentLayer).find(".showInputText").text(inputText);
+                        if(inputText != "") {
+                            huitianInput(inputText);
+                            layer.close(index);
+                        }else {
+                            layer.msg("输入内容不能为空！");
+                        }
+                    },
+                    btn2: function (index,layero) {
+                        layer.close(index);
+                    }
+
                 });
             });
             //弹出一个iframe层
@@ -466,6 +484,11 @@ layer.open({
         layui.use("code",function () {  //加载code模块
             layui.code();     //引用code方法
         });
+    </script>
+    <script>
+        function huitianInput(aa) {
+            $(".showInputText").text(aa);
+        }
     </script>
 </body>
 </html>

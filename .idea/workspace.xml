@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4b3e4bf-d4fa-47b1-9068-238390e001c1" name="Default" comment="新增js文件">
+    <list default="true" id="c4b3e4bf-d4fa-47b1-9068-238390e001c1" name="Default" comment="(1)jsExample.html修改&#10;(2)01js_dataType.js修改&#10;(3)新增day20190121.html和day20190125.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/jquery/01preLoadFormElem.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jquery/01preLoadFormElem.html" afterDir="false" />
     </list>
+    <ignored path=".idea/misc.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,42 +14,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="day20190325.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190325.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="77" column="25" lean-forward="true" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+            <state relative-caret-position="612">
+              <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="day20190323.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190323.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="day20190324.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190324.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="day20190326.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190326.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="12layer.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/layui/12layer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="338" column="14" lean-forward="true" selection-start-line="338" selection-start-column="14" selection-end-line="338" selection-end-column="14" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#iframe#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="01preLoadFormElem.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/pages/jquery/01preLoadFormElem.js">
+      <file leaf-file-name="08layuiTable.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/layui/08layuiTable.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="04layuiForm.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/layui/04layuiForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="468">
+              <caret line="26" column="12" selection-start-line="6" selection-start-column="4" selection-end-line="26" selection-end-column="12" />
+              <folding>
+                <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="01preLoadFormElem.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/jquery/01preLoadFormElem.html">
+      <file leaf-file-name="13测试表单内多个相同字段提交.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/layui/13测试表单内多个相同字段提交.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="33" column="31" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="31" />
+            <state relative-caret-position="2952">
+              <caret line="164" column="30" selection-start-line="164" selection-start-column="30" selection-end-line="164" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listJquery.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/jquery/listJquery.html">
+      <file leaf-file-name="day20190331.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190331.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            <state relative-caret-position="342">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="day20190329.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190329.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -60,10 +111,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>layui-input-inline</find>
+      <find>layui-input-block</find>
+      <find>layui-form-mid</find>
+      <find>layui-word-aux</find>
+      <find>fun</find>
+      <find>formDemo</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,17 +133,68 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/layui/list.html" />
-        <option value="$PROJECT_DIR$/pages/echarts/listEcharts.html" />
-        <option value="$PROJECT_DIR$/pages/layui/listLayui.html" />
-        <option value="$PROJECT_DIR$/assets/pages/echarts/listEcharts.js" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day1210.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20181210.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/pages/jquery/01preLoadFormElem.html" />
+        <option value="$PROJECT_DIR$/pages/javascript/01js_dataType.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/listDayDayUp.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190102.html" />
+        <option value="$PROJECT_DIR$/assets/pages/javascript/jsExample.js" />
+        <option value="$PROJECT_DIR$/assets/pages/javascript/01js_dataType.js" />
+        <option value="$PROJECT_DIR$/pages/javascript/jsExample.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190121.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190125.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190128.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190129.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190130.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190213.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190214.html" />
+        <option value="$PROJECT_DIR$/assets/pages/dayDayUp/dayDayUpCommon.css" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190216.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190215.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190218.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190219.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190220.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190222.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190226.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190227-2.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190227.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190228.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190225.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190304.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190303.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190302.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190305.html" />
+        <option value="$PROJECT_DIR$/../blog/_config.yml" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190307.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190312.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190313.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190310.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190308.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190314.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/20190316.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190317.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190316.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190319.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190325.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190323.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190324.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190331.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190329.html" />
+        <option value="$PROJECT_DIR$/pages/dayDayUp/day20190326.html" />
+        <option value="$PROJECT_DIR$/pages/layui/13测试表单内多个相同字段提交.html" />
+        <option value="$PROJECT_DIR$/pages/layui/12layer.html" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -90,17 +203,20 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="110" />
-    <option name="y" value="20" />
-    <option name="width" value="1615" />
-    <option name="height" value="860" />
+    <option name="x" value="50" />
+    <option name="y" value="30" />
+    <option name="width" value="1855" />
+    <option name="height" value="945" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,41 +238,48 @@
             <path>
               <item name="myPractice" type="b2602c69:ProjectViewProjectNode" />
               <item name="myPractice" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="myPractice" type="b2602c69:ProjectViewProjectNode" />
               <item name="myPractice" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="layui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="myPractice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myPractice" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eos-web" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\myPractice\pages\dayDayUp" />
+      <recent name="D:\workspace\myPractice\assets\pages" />
+      <recent name="D:\workspace\myPractice\assets\libs\echarts" />
+      <recent name="D:\workspace\myPractice\assets\pages\H5\duyi\canvasErweima\images" />
       <recent name="D:\workspace\myPractice\assets\libs\jquery" />
-      <recent name="F:\学习\myPractice\pages\echarts" />
-      <recent name="F:\学习\myPractice\assets\libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\myPractice\pages\layui" />
+      <recent name="D:\workspace\myPractice\assets\pages\H5\duyi\canvasErweima" />
       <recent name="F:\study\myPractice\assets\libs\pages" />
     </key>
   </component>
@@ -231,7 +354,120 @@
       <workItem from="1531729423366" duration="5417000" />
       <workItem from="1531742089624" duration="360000" />
       <workItem from="1531785436850" duration="100000" />
-      <workItem from="1531920735205" duration="1296000" />
+      <workItem from="1531920735205" duration="1779000" />
+      <workItem from="1531922547936" duration="755000" />
+      <workItem from="1532157271553" duration="1101000" />
+      <workItem from="1532162135794" duration="1777000" />
+      <workItem from="1532163935688" duration="1789000" />
+      <workItem from="1532165746836" duration="1788000" />
+      <workItem from="1532167575349" duration="1881000" />
+      <workItem from="1532169782547" duration="168000" />
+      <workItem from="1532608397232" duration="43000" />
+      <workItem from="1532608577103" duration="1795000" />
+      <workItem from="1532611263277" duration="1254000" />
+      <workItem from="1532693658678" duration="1185000" />
+      <workItem from="1536320399796" duration="2266000" />
+      <workItem from="1542155497344" duration="312000" />
+      <workItem from="1542158516917" duration="430000" />
+      <workItem from="1542158968922" duration="8796000" />
+      <workItem from="1542332775208" duration="4490000" />
+      <workItem from="1542587349828" duration="12780000" />
+      <workItem from="1542672830380" duration="14503000" />
+      <workItem from="1542759615843" duration="6959000" />
+      <workItem from="1542931807387" duration="4672000" />
+      <workItem from="1543192040511" duration="10940000" />
+      <workItem from="1543281899463" duration="22508000" />
+      <workItem from="1543370227873" duration="5539000" />
+      <workItem from="1543376692132" duration="3147000" />
+      <workItem from="1543388986045" duration="5084000" />
+      <workItem from="1543454146392" duration="13000" />
+      <workItem from="1543454184799" duration="5000" />
+      <workItem from="1543454221006" duration="7000" />
+      <workItem from="1543454250686" duration="2672000" />
+      <workItem from="1543548224820" duration="8563000" />
+      <workItem from="1543982066590" duration="3901000" />
+      <workItem from="1544054975475" duration="17223000" />
+      <workItem from="1544140413362" duration="13897000" />
+      <workItem from="1544400612252" duration="654000" />
+      <workItem from="1544486919223" duration="8918000" />
+      <workItem from="1544746327404" duration="774000" />
+      <workItem from="1545036418776" duration="840000" />
+      <workItem from="1545179042073" duration="4892000" />
+      <workItem from="1545275945483" duration="3256000" />
+      <workItem from="1545873346740" duration="7257000" />
+      <workItem from="1546055577827" duration="2694000" />
+      <workItem from="1546390075208" duration="5890000" />
+      <workItem from="1546475779742" duration="6430000" />
+      <workItem from="1546568518714" duration="1401000" />
+      <workItem from="1547091274777" duration="4875000" />
+      <workItem from="1547172750182" duration="3735000" />
+      <workItem from="1547428495050" duration="4621000" />
+      <workItem from="1547516473486" duration="2427000" />
+      <workItem from="1547599254069" duration="4345000" />
+      <workItem from="1547703869138" duration="1643000" />
+      <workItem from="1548222636457" duration="7974000" />
+      <workItem from="1548384794736" duration="1678000" />
+      <workItem from="1548394412959" duration="1000" />
+      <workItem from="1548394997789" duration="1000" />
+      <workItem from="1548395078249" duration="147000" />
+      <workItem from="1548395611134" duration="26000" />
+      <workItem from="1548395672719" duration="1437000" />
+      <workItem from="1548398352878" duration="418000" />
+      <workItem from="1548398837669" duration="262000" />
+      <workItem from="1548399276221" duration="21000" />
+      <workItem from="1548399403250" duration="601000" />
+      <workItem from="1548662272559" duration="2461000" />
+      <workItem from="1548721189855" duration="5074000" />
+      <workItem from="1548815252937" duration="10966000" />
+      <workItem from="1548915796334" duration="3606000" />
+      <workItem from="1550017445376" duration="5000" />
+      <workItem from="1550017726691" duration="906000" />
+      <workItem from="1550018854164" duration="5623000" />
+      <workItem from="1550104476697" duration="3000" />
+      <workItem from="1550104666811" duration="3000" />
+      <workItem from="1550104740433" duration="3827000" />
+      <workItem from="1550188863833" duration="2692000" />
+      <workItem from="1550276893519" duration="9714000" />
+      <workItem from="1550449578624" duration="15700000" />
+      <workItem from="1550561913372" duration="2010000" />
+      <workItem from="1550649763485" duration="2825000" />
+      <workItem from="1550708314449" duration="598000" />
+      <workItem from="1550793399364" duration="633000" />
+      <workItem from="1551054142501" duration="7357000" />
+      <workItem from="1551143450907" duration="3444000" />
+      <workItem from="1551227554027" duration="9503000" />
+      <workItem from="1551315043625" duration="4460000" />
+      <workItem from="1551659012305" duration="6589000" />
+      <workItem from="1551744561499" duration="19574000" />
+      <workItem from="1551840349565" duration="3038000" />
+      <workItem from="1551945236213" duration="650000" />
+      <workItem from="1551948156451" duration="1688000" />
+      <workItem from="1551952722261" duration="131000" />
+      <workItem from="1552017445983" duration="2080000" />
+      <workItem from="1552263692141" duration="2334000" />
+      <workItem from="1552350302756" duration="1264000" />
+      <workItem from="1552435900463" duration="6375000" />
+      <workItem from="1552523764724" duration="6004000" />
+      <workItem from="1552550475698" duration="1347000" />
+      <workItem from="1552609095702" duration="3146000" />
+      <workItem from="1552871676301" duration="5848000" />
+      <workItem from="1552988635369" duration="1053000" />
+      <workItem from="1552998296591" duration="616000" />
+      <workItem from="1553040569220" duration="1095000" />
+      <workItem from="1553130583902" duration="597000" />
+      <workItem from="1553138775776" duration="238000" />
+      <workItem from="1553139036056" duration="681000" />
+      <workItem from="1553140291683" duration="1464000" />
+      <workItem from="1553148343507" duration="160000" />
+      <workItem from="1553148690042" duration="728000" />
+      <workItem from="1553213584714" duration="1823000" />
+      <workItem from="1553492911798" duration="6645000" />
+      <workItem from="1553853981177" duration="3047000" />
+      <workItem from="1553917535765" duration="598000" />
+      <workItem from="1554079828385" duration="4710000" />
+      <workItem from="1555418935435" duration="5026000" />
+      <workItem from="1555818948824" duration="2788000" />
+      <workItem from="1555821801125" duration="617000" />
     </task>
     <task id="LOCAL-00001" summary="新增js文件">
       <created>1531742252535</created>
@@ -240,37 +476,214 @@
       <option name="project" value="LOCAL" />
       <updated>1531742252535</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="新增js文件,添加目录链接">
+      <created>1531922206673</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1531922206673</updated>
+    </task>
+    <task id="LOCAL-00003" summary="新增js文件,添加目录链接">
+      <created>1531922702721</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1531922702721</updated>
+    </task>
+    <task id="LOCAL-00004" summary="echarts新增引入echarts (2)新增echarts实例与柱状图（3）修改echarts目录">
+      <created>1542175979066</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1542175979066</updated>
+    </task>
+    <task id="LOCAL-00005" summary="新增layui学习--页面元素（布局）">
+      <created>1542594936271</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542594936271</updated>
+    </task>
+    <task id="LOCAL-00006" summary="新增layui表单练习">
+      <created>1542951900594</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1542951900594</updated>
+    </task>
+    <task id="LOCAL-00007" summary="新增layui-form练习文件">
+      <created>1542953415318</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1542953415318</updated>
+    </task>
+    <task id="LOCAL-00008" summary="新增layui元素-tab选项卡">
+      <created>1543221679221</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1543221679221</updated>
+    </task>
+    <task id="LOCAL-00009" summary="新增layui-页面元素-进度条">
+      <created>1543288696279</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543288696279</updated>
+    </task>
+    <task id="LOCAL-00010" summary="修改layui目录，添加目录链接">
+      <created>1543288819556</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1543288819556</updated>
+    </task>
+    <task id="LOCAL-00011" summary="（1）新增layui面板&#10;（2）修改layui目录">
+      <created>1543299737415</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1543299737415</updated>
+    </task>
+    <task id="LOCAL-00012" summary="（1）新增layui静态表格&#10;（2）修改layui目录">
+      <created>1543308335238</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1543308335238</updated>
+    </task>
+    <task id="LOCAL-00013" summary="（1）新增layui徽章&#10;（2）修改layui目录">
+      <created>1543313332622</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1543313332622</updated>
+    </task>
+    <task id="LOCAL-00014" summary="（1）新增layui-timeline并修改layui目录&#10;（2）重命名html+css时间线并修改html目录">
+      <created>1543374668318</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1543374668318</updated>
+    </task>
+    <task id="LOCAL-00015" summary="新增layui-辅助元素并且修改layui目录">
+      <created>1543377264045</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1543377264045</updated>
+    </task>
+    <task id="LOCAL-00016" summary="新增js文件---数据类型">
+      <created>1544510237491</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1544510237492</updated>
+    </task>
+    <task id="LOCAL-00017" summary="新增模块--每日一题，创建目录，主页目录增加，新增20181210">
+      <created>1544518906160</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1544518906160</updated>
+    </task>
+    <task id="LOCAL-00018" summary="(1)新增js文件，javascript练习jsExample.html与jsExample.js&#10;(2)修改文件01js_dataType.html与01js_dataType.js">
+      <created>1546071773759</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1546071773759</updated>
+    </task>
+    <task id="LOCAL-00019" summary="（1）jsExample.html和jsExample.js添加新的测试例子&#10;（2）每日一题练习增加">
+      <created>1547113430711</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1547113430711</updated>
+    </task>
+    <task id="LOCAL-00020" summary="(1)jsExample.html修改&#10;(2)01js_dataType.js修改&#10;(3)新增day20190121.html和day20190125.html">
+      <created>1548387810927</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1548387810928</updated>
+    </task>
+    <task id="LOCAL-00021" summary="(1)day20190128.html新增&#10;(2)day20190129.html修改&#10;(3)新增day20190130.html">
+      <created>1548834274438</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1548834274438</updated>
+    </task>
+    <task id="LOCAL-00022" summary="新增daydayup每日一题">
+      <created>1551083140018</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1551083140018</updated>
+    </task>
+    <task id="LOCAL-00023" summary="新增daydayup中每日一题">
+      <created>1551768468691</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1551768468691</updated>
+    </task>
+    <task id="LOCAL-00024" summary="新增daydayup练习页面">
+      <created>1552879235104</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1552879235104</updated>
+    </task>
+    <task id="LOCAL-00025" summary="(1)12layer.html修改">
+      <created>1555821688217</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1555821688217</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8532000" />
+    <option name="totallyTimeSpent" value="431840000" />
+  </component>
+  <component name="TodoView" selected-index="3">
+    <todo-panel id="selected-file">
+      <is-preview-enabled value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-224" y="16" width="1554" height="832" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49926144" weight="0.3137931" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.65574867" side_tool="true" visible="true" weight="0.07988588" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2076823" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.34425133" visible="true" weight="0.07988588" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18850267" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -282,208 +695,436 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="SHOW_DETAILS_IN_CHANGES" value="false" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增js文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增js文件" />
+    <MESSAGE value="新增js文件,添加目录链接" />
+    <MESSAGE value="echarts新增引入echarts (2)新增echarts实例与柱状图（3）修改echarts目录" />
+    <MESSAGE value="新增layui学习--页面元素（布局）" />
+    <MESSAGE value="新增layui表单练习" />
+    <MESSAGE value="新增layui-form练习文件" />
+    <MESSAGE value="新增layui元素-tab选项卡" />
+    <MESSAGE value="新增layui-页面元素-进度条" />
+    <MESSAGE value="修改layui目录，添加目录链接" />
+    <MESSAGE value="（1）新增layui面板&#10;（2）修改layui目录" />
+    <MESSAGE value="（1）新增layui静态表格&#10;（2）修改layui目录" />
+    <MESSAGE value="（1）新增layui徽章&#10;（2）修改layui目录" />
+    <MESSAGE value="（1）新增layui-timeline并修改layui目录&#10;（2）重命名html+css时间线并修改html目录" />
+    <MESSAGE value="新增layui-辅助元素并且修改layui目录" />
+    <MESSAGE value="新增js文件---数据类型" />
+    <MESSAGE value="新增模块--每日一题，创建目录，主页目录增加，新增20181210" />
+    <MESSAGE value="(1)新增js文件，javascript练习jsExample.html与jsExample.js&#10;(2)修改文件01js_dataType.html与01js_dataType.js" />
+    <MESSAGE value="（1）jsExample.html和jsExample.js添加新的测试例子&#10;（2）每日一题练习增加" />
+    <MESSAGE value="(1)jsExample.html修改&#10;(2)01js_dataType.js修改&#10;(3)新增day20190121.html和day20190125.html" />
+    <MESSAGE value="(1)day20190128.html新增&#10;(2)day20190129.html修改&#10;(3)新增day20190130.html" />
+    <MESSAGE value="新增daydayup每日一题" />
+    <MESSAGE value="新增daydayup中每日一题" />
+    <MESSAGE value="新增daydayup练习页面" />
+    <MESSAGE value="(1)12layer.html修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="(1)12layer.html修改" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/assets/pages/javascript/01js_dataType.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="111" column="14" lean-forward="true" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="6390">
+          <caret line="355" selection-start-line="355" selection-end-line="355" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/pages/javascript/jsExample.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="5310">
+          <caret line="375" column="47" selection-start-line="375" selection-start-column="47" selection-end-line="375" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/echarts/listEcharts.html">
+    <entry file="file://$PROJECT_DIR$/assets/pages/javascript/jsExample.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="162">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/layui/listLayui.html">
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/listDayDayUp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="198">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/pages/echarts/listEcharts.js">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17411" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190129.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190128.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190125.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190121.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/pages/dayDayUp/dayDayUpCommon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190218.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190216.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/javascript/01js_dataType.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190130.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190215.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190214.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190213.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190219.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="59" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190220.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190222.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190227.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190226.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190225.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190228.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190227-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190304.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="8" selection-start-line="7" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190302.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../blog/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="80" column="11" lean-forward="true" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190305.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190303.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190307.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/echarts/day01/bar.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190312.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/echarts/listEcharts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/layui/listLayui.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="306">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="110" column="44" lean-forward="true" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1278">
+          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/echarts/listEcharts.html">
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190310.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="828">
+          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/layui/listLayui.html">
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190308.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="324">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/pages/echarts/listEcharts.js">
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190313.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190314.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190317.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190316.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190319.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190325.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190331.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190329.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/layui/08layuiTable.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/pages/layui/13测试表单内多个相同字段提交.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        <state relative-caret-position="2952">
+          <caret line="164" column="30" selection-start-line="164" selection-start-column="30" selection-end-line="164" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/layui/04layuiForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="12" selection-start-line="6" selection-start-column="4" selection-end-line="26" selection-end-column="12" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/echarts/listEcharts.html">
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190326.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="504">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/layui/listLayui.html">
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190324.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="306">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/libs/pages/echarts/listEcharts.js" />
-    <entry file="file://$PROJECT_DIR$/assets/libs/pages/layui/listLayui.js" />
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/pages/dayDayUp/day20190323.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        <state relative-caret-position="144">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/layui/12layer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="338" column="14" lean-forward="true" selection-start-line="338" selection-start-column="14" selection-end-line="338" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/echarts/listEcharts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/layui/listLayui.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/echarts/listEcharts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/libs/pages/echarts/listEcharts.js" />
-    <entry file="file://$PROJECT_DIR$/assets/libs/pages/layui/listLayui.js" />
-    <entry file="file://$PROJECT_DIR$/pages/layui/listLayui.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/jquery/listJquery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="77" column="25" lean-forward="true" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/pages/jquery/01preLoadFormElem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/libs/jquery/jquery-3.3.1.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/jquery/01preLoadFormElem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

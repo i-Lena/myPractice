@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>严格模式下的参数列表</title>
+</head>
+<body>
+
+<script>
+    function testArg(first,second) {
+        'use strict'
+        console.log(first === arguments[0]);
+        console.log(second === arguments[1]);
+        first = 'c';
+        second = 'd';
+        console.info(first === arguments[0]);
+        console.info(second === arguments[1]);
+        console.info(arguments);
+    }
+    testArg("a","b");
+</script>
+</body>
+</html>

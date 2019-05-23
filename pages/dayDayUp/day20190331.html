@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组添加元素</title>
+</head>
+<body>
+
+<script>
+    var arr = [3,'dfdf','aaa',5];
+    arr.push(666);
+    console.info(arr);   //[3,'dfdf','aaa',5,666]
+    arr.push('ccc');
+    console.info(arr);  //[3,'dfdf','aaa',5,666,'ccc']
+    arr.unshift('111');
+    console.info(arr);   //['111',3,'dfdf','aaa',5,666,'ccc']
+    arr.unshift(222);
+    console.info(arr);  //[222,'111',3,'dfdf','aaa',5,666,'ccc']
+</script>
+<script>
+    var arr1 = [3,'dfdf','aaa',5];
+    //在开头添加
+    arr1 = ['start',...arr1];
+    console.info(arr1);   //['start',3,'dfdf','aaa',5]
+    //在末尾添加
+    arr1 = [...arr1,'end'];
+    console.info(arr1);   //['start',3,'dfdf','aaa',5,'end']
+    arr1 = ['start111',...arr1,'end111'];
+    console.info(arr1); //['start111','start',3,'dfdf','aaa',5,'end','end111']
+</script>
+</body>
+</html>

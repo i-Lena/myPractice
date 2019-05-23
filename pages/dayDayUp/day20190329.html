@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断字符串是否是回文</title>
+</head>
+<body>
+
+<script>
+    var str = 'abcdefedcba';
+    var str1 = 'abcdefgsedcba';
+    function judgePalindrome(str) {
+        return str === str.split("").reverse().join("");
+    }
+    var flag = judgePalindrome(str);
+    var flag1 = judgePalindrome(str1);
+    console.info(str + "是回文：" + flag);
+    console.info(str1 + "是回文：" + flag1);
+</script>
+</body>
+</html>

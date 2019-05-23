@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉筛选框</title>
+</head>
+<body>
+<form action="">
+    <select name="province" id="province" onchange="modifyInfo();">
+        <option value="">--请选择--</option>
+        <option value="1">山东</option>
+        <option value="2">四川</option>
+        <option value="3">辽宁</option>
+        <option value="4">广东</option>
+    </select>
+    <div class="">
+        位于中国的
+        <span class="location"></span>
+    </div>
+    <label for="city">省会：</label>
+    <input type="text" id="city" />
+    <input type="text" id="yesOrNO" />
+</form>
+
+<script src="../../assets/libs/jquery/jquery-3.3.1.js"></script>
+<script>
+    function modifyInfo(){
+        var province = $("#province option:selected").val();
+        console.info(province);
+        var loction = "";
+        var city = "";
+        switch (province) {
+            case "1" :
+                loction = "东部",city = "济南";
+                $("#yesOrNO").attr("disabled",true);
+                break;
+            case "2" :
+                loction = "西部",city = "成都";
+                $("#yesOrNO").removeAttr("disabled");
+                break;
+            case "3" :
+                loction = "北部",city = "沈阳";
+                $("#yesOrNO").attr("disabled",true);
+                break;
+            case "4" :
+                loction = "南部",city = "广州";
+                $("#yesOrNO").removeAttr("disabled");
+                break;
+        }
+        $(".location").text(loction);
+        $("#city").val(city);
+    }
+    // $("#province").change(function () {
+    //     var province = $("#province option:selected").val();
+    //     console.info(province);
+    //     var loction = "";
+    //     var city = "";
+    //     switch (province) {
+    //         case "1" :
+    //             loction = "东部",city = "济南";
+    //             $("#yesOrNO").attr("disabled",true);
+    //             break;
+    //         case "2" :
+    //             loction = "西部",city = "成都";
+    //             $("#yesOrNO").removeAttr("disabled");
+    //             break;
+    //         case "3" :
+    //             loction = "北部",city = "沈阳";
+    //             $("#yesOrNO").attr("disabled",true);
+    //             break;
+    //         case "4" :
+    //             loction = "南部",city = "广州";
+    //             $("#yesOrNO").removeAttr("disabled");
+    //             break;
+    //     }
+    //     $(".location").text(loction);
+    //     $("#city").val(city);
+    // });
+
+</script>
+</body>
+</html>
